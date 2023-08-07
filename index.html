@@ -12,16 +12,119 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/media-button.css" />
 
     <style>
-        body {
-            font-family: 'Roboto', Arial;
-            color: white;
+
+        /* About Me */
+        .about-container {
+            /* background-color: aquamarine; */
+
+            display: flex;
+            flex-direction: column;
+
+            margin: 0 auto;
+            width: 880px;
         }
 
-        p {
-            margin: 0;
+
+
+        /* Me Content */
+        .me-content-container {
+            margin-top: 60px;
+
+            display: grid;
+            grid-template-columns: 30% 1fr;
+        }
+
+        /* Me Content Icon */
+        .me-content-icon-container {
+            /* background-color: blue; */
+            padding: 0px 10px;
+        }
+
+        .me-content-icon {
+            width: 100%;
+        }
+
+        /* Me Content Text */
+        .me-content-text-container {
+            /* background-color: white; */
+            padding-left: 5px;
+            display: grid;
+            grid-template-rows: 80px 1fr;
+        }
+
+        .me-content-text-header {
+            /* background-color: purple; */
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            
+
+            font-size: 50px;
+            font-weight: 900;
+        }
+
+        .me-content-text-desc {
+            /* background-color: green; */
+            padding: 8px;
+            font-size: 20px;
+            font-weight: 500;
+            color: rgb(200, 200, 200);
+        }
+
+
+
+        /* Me Info */
+        .me-info-container {
+            /* background-color: yellow; */
+            margin-top: 36px;
+            margin-bottom: 40px;
+            height: 80px;
+
+            display: grid;
+            grid-template-columns: 30% 1fr;
+        }
+        
+
+        /* Work Status */
+        .work-status-on {
+            color: rgb(40, 255, 100);
+            font-weight: 700;
+        }
+
+        .work-status-off {
+            color: rgb(200, 200, 200);
+            font-weight: 700;
+        }
+        
+        .me-info-work-status-container {
+            position: relative;
+            margin: 6px;
+        }
+
+        .me-info-work-status-text {
+            margin-top : 8px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .me-info-work-status-date-text {
+            text-align: center;
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin-bottom: 10px;
+            color: rgb(200, 200, 200);
+        }
+
+        
+        /* Contacts */
+        .me-info-contacts-container {
+            margin: 6px;
         }
 
         .grid-test {
@@ -29,14 +132,74 @@
             grid-template-columns: 270px 270px 270px;
             grid-gap: 20px;
         }
+
+
+
+
+        .page-block-header-container {
+            /* background-color: aquamarine; */
+            display: grid;
+            grid-template-rows: 40px 1fr;
+
+            margin: 0 auto;
+            width: 1005px;
+        }
+
+        .page-block-header-text-header {
+            /* background-color: red; */
+            font-weight: 700;
+            font-size: 32px;
+        }
+
+        .page-block-header-text-info {
+            margin-top: 2px;
+            /* background-color: green; */
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: rgb(200, 200, 200);
+        }
     </style>
 </head>
 
 <!-- style = "background-color: rgb(28, 28, 28);" -->
-<body style = "background-color: rgb(35, 35, 35);">
+<body style = "background-color: rgb(28, 28, 28);">
 
-    <!-- Page Content -->
-    <div class="grid-test" id = "gridContainer"> </div>
+    <!-- Page HTML Content -->
+    <div class = "page-content">
+
+        <!-- About Me -->
+        <div class = "page-block">
+            <div class = "about-container">
+                <div class = "me-content-container">
+                    <div class = "me-content-icon-container">
+                        <img class = "me-content-icon" src = "assets/about-me/me-icon.png" />
+                    </div>
+                    <div class = "me-content-text-container">
+                        <header class = "me-content-text-header">👋Hi, I'm PineCrumb.</header>
+                        <div class = "me-content-text-desc">I'm a 16 year old developer from the Philippines. I'm a 16 year old developer from the Philippines. I'm a 16 year old developer from the Philippines.</div>
+                    </div>
+                </div>
+                <div class = "me-info-container">
+                    <div class = "me-info-work-status-container black-frame">
+                        <div class = "me-info-work-status-text">Status: <span class = "work-status-on">Open for Work!</span></div>
+                        <div class = "me-info-work-status-date-text">Last Updated: August 2023</div>
+                    </div>
+                    <div class = "me-info-contacts-container black-frame">
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class = "page-block-header-container">
+            <div class = "page-block-header-text-header">My Skills</div>
+            <div class = "page-block-header-text-info">I'm a 16 year old  jgd;lkfj kjd ;lkdfsj;gldfkjgf;lkjdfgs;lkdfgj   jsdf;glk j;ds kfjds; flj l;sdfj d;lkd fsj;ldf gsj;ldf gjd developer from the Philippines.</div>
+        </div>
+
+        <!-- Other -->
+        <div class="grid-test" id = "gridContainer"> </div>
+
+    </div>
 
     <!-- Scripts -->
     <script src="js/media-button.js"></script>
@@ -45,7 +208,6 @@
     <script>
         // Make media buttons
         const gridContainer = document.getElementById('gridContainer');
-
         const mediaDatas = [
             {
                 title: "Land of Merchants (Supersocial)",

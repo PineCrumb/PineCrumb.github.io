@@ -23,6 +23,7 @@ function makeMediaButton(mediaData) {
 
     const frame = document.createElement('div');
     frame.classList.add('media-button-frame');
+    frame.classList.add('grey-frame');
 
     const image = document.createElement('img');
     image.classList.add('media-button-thumbnail');

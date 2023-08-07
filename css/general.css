@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', Arial;
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+.grey-frame {
+    background-color: rgb(50, 50, 50);
+    box-shadow: 0px 3px 10px -3px rgba(10, 10, 10, 0.8);
+    border-radius: 8px;
+
+    border-style: solid;
+    border-color: rgba(70, 70, 70, 0.9);
+    border-width: 1px;
+}
+
+.black-frame {
+    background-color: rgb(30, 30, 30);
+    box-shadow: 0px 3px 10px -3px rgba(10, 10, 10, 0.8);
+    border-radius: 8px;
+
+    border-style: solid;
+    border-color: rgba(70, 70, 70, 0.9);
+    border-width: 1px;  
+}
+
+.page-content {
+    background-color: rgb(35, 35, 35);
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1200px;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    display: flex;
+    justify-content: top;
+    align-items: left;
+    flex-direction: column;
+}
+
+.page-block {
+    position:relative;
+    /* background-color: red; For testing */
+}
