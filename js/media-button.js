@@ -38,6 +38,53 @@
 
 */
 
+function applyHoverStyles(frame, image, revealClipping) {
+    frame.style.top = '-10px';
+    frame.style.backgroundColor = 'rgb(85, 85, 85)';
+    frame.style.height = 'calc(100% + 140px)';
+    frame.style.width = 'calc(100% + 20px)';
+    frame.style.zIndex = '1';
+
+    image.style.filter = 'grayscale(0%)';
+    revealClipping.style.opacity = '1';
+}
+
+function removeHoverStyles(frame, image, revealClipping) {
+    frame.style.top = '';
+    frame.style.backgroundColor = '';
+    frame.style.height = '';
+    frame.style.width = '';
+    frame.style.zIndex = '';
+
+    image.style.filter = '';
+    revealClipping.style.opacity = '';
+}
+
+function addMediaButtonEventListeners(entry) {
+    const frame = entry.querySelector('.media-button-frame');
+    const image = entry.querySelector('.media-button-thumbnail');
+    const revealClipping = entry.querySelector('.media-button-reveal-clipping');
+
+    entry.addEventListener('mouseenter', () => {
+        applyHoverStyles(frame, image, revealClipping);
+        entry.style.cursor = 'pointer';
+    });
+
+    entry.addEventListener('mouseleave', () => {
+        removeHoverStyles(frame, image, revealClipping);
+        entry.style.cursor = '';
+    });
+
+    entry.addEventListener('touchstart', (event) => {
+        applyHoverStyles(frame, image, revealClipping);
+        event.preventDefault(); // Prevents scrolling while touching
+    });
+
+    entry.addEventListener('touchend', () => {
+        removeHoverStyles(frame, image, revealClipping);
+    });
+}
+
 function makeMediaButton(mediaData) {
     const entry = document.createElement('div');
     entry.classList.add('media-button');
@@ -81,33 +128,7 @@ function makeMediaButton(mediaData) {
     frame.appendChild(content);
     entry.appendChild(frame);
 
-    // Mouse enter event
-    entry.addEventListener('mouseenter', () => {
-        entry.style.cursor = 'pointer';
-
-        frame.style.top = '-10px';
-        frame.style.backgroundColor = 'rgb(85, 85, 85)';
-        frame.style.height = 'calc(100% + 140px)';
-        frame.style.width = 'calc(100% + 20px)';
-        frame.style.zIndex = '1';
-
-        image.style.filter = 'grayscale(0%)';
-        revealClipping.style.opacity = '1';
-    });
-
-    // Mouse leave event
-    entry.addEventListener('mouseleave', () => {
-        entry.style.cursor = '';
-
-        frame.style.top = '';
-        frame.style.backgroundColor = '';
-        frame.style.height = '';
-        frame.style.width = '';
-        frame.style.zIndex = '';
-
-        image.style.filter = '';
-        revealClipping.style.opacity = '';
-    });
+    addMediaButtonEventListeners(entry);
 
     return entry;
 }
