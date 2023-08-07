@@ -149,21 +149,33 @@
             /* background-color: aquamarine; */
 
             position: relative;
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: 220px 220px 220px 220px;
 
-            padding: 0px 40px;
+            padding: 0px 25px;
             margin: 0 auto 10px auto;
         }
 
         .skills-frame {
-            background-color: green;
+            /* background-color: green; */
             
-            margin: 6px 10px 60px 10px;
-            width: 200px;
+            display: grid;
+            grid-template-rows: 50px 1fr;
+
+            margin: 14px 10px 34px 10px;
             height: 320px;
         }
 
+        .skills-frame-header {
+            /* background-color: blue; */
+            margin: 6px 4px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .skills-frame-content {
+            /* background-color: violet; */
+        }
 
         .grid-test {
             display: grid;
@@ -215,17 +227,29 @@
 
         <div class = "page-block">
             <div class = "skills-container black-frame">
-                <div class = "skills-frame">
+                <div class = "skills-frame ">
+                    <div class = "skills-frame-header">Languages</div>
+                    <div class = "skills-frame-content grey-frame">
 
+                    </div>
                 </div>
-                <div class = "skills-frame">
+                <div class = "skills-frame ">
+                    <div class = "skills-frame-header">Languages</div>
+                    <div class = "skills-frame-content grey-frame">
 
+                    </div>
                 </div>
-                <div class = "skills-frame">
+                <div class = "skills-frame ">
+                    <div class = "skills-frame-header">Languages</div>
+                    <div class = "skills-frame-content grey-frame">
 
+                    </div>
                 </div>
-                <div class = "skills-frame">
+                <div class = "skills-frame ">
+                    <div class = "skills-frame-header">Languages</div>
+                    <div class = "skills-frame-content grey-frame">
 
+                    </div>
                 </div>
             </div>
         </div>

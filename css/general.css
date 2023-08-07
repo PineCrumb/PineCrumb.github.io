@@ -58,7 +58,7 @@ p {
 
 .page-block {
     position:relative;
-    background-color: red;
+    /* background-color: red; */
 }
 
 /* Header */
