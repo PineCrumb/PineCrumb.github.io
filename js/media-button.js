@@ -75,14 +75,14 @@ function addMediaButtonEventListeners(entry) {
         entry.style.cursor = '';
     });
 
-    entry.addEventListener('touchstart', (event) => {
-        applyHoverStyles(frame, image, revealClipping);
-        event.preventDefault(); // Prevents scrolling while touching
-    });
+    // entry.addEventListener('touchstart', (event) => {
+    //     applyHoverStyles(frame, image, revealClipping);
+    //     event.preventDefault(); // Prevents scrolling while touching
+    // });
 
-    entry.addEventListener('touchend', () => {
-        removeHoverStyles(frame, image, revealClipping);
-    });
+    // entry.addEventListener('touchend', () => {
+    //     removeHoverStyles(frame, image, revealClipping);
+    // });
 }
 
 function makeMediaButton(mediaData) {
