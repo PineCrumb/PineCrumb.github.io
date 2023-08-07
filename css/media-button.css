@@ -95,12 +95,14 @@
     z-index: 2;
 }
 
-.media-button:hover {
+.media-button:hover,
+.media-button:active {
     z-index: 1;
     cursor: pointer;
 }
 
-.media-button:hover .media-button-frame {
+.media-button:hover .media-button-frame,
+.media-button:active .media-button-frame {
     top: -10px;
     background-color: rgb(85, 85, 85);
     height: calc(100% + 140px);
@@ -108,10 +110,12 @@
     z-index: 1;
 }
 
-.media-button:hover .media-button-thumbnail {
+.media-button:hover .media-button-thumbnail,
+.media-button:active .media-button-thumbnail {
     filter: grayscale(0%);
 }
 
-.media-button:hover .media-button-reveal-clipping {
+.media-button:hover .media-button-reveal-clipping,
+.media-button:active .media-button-reveal-clipping {
     opacity: 1;
 }
