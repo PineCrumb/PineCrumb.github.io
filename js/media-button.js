@@ -38,6 +38,19 @@
 
 */
 
+// easy code for checking if mobile or not
+let isUsingMouse = false;
+
+// Detect mouse movement
+document.addEventListener('mousemove', () => {
+  isUsingMouse = true;
+});
+
+// Detect touch interactions
+document.addEventListener('touchstart', () => {
+  isUsingMouse = false;
+});
+
 function applyHoverStyles(frame, image, revealClipping) {
     frame.style.top = '-10px';
     frame.style.backgroundColor = 'rgb(85, 85, 85)';
@@ -66,6 +79,7 @@ function addMediaButtonEventListeners(entry) {
     const revealClipping = entry.querySelector('.media-button-reveal-clipping');
 
     entry.addEventListener('mouseenter', () => {
+        if (!isUsingMouse) return;
         applyHoverStyles(frame, image, revealClipping);
         entry.style.cursor = 'pointer';
     });
