@@ -215,14 +215,6 @@
         mediaDatas.forEach(mediaData => {
             const entry = makeMediaButton(mediaData);
             gridContainer.appendChild(entry);
-
-            entry.addEventListener('click', () => {
-                window.open(mediaData.url, '_blank');
-            });
-
-            entry.addEventListener('touchstart', () => {
-                window.open(mediaData.url, '_blank');
-            });
         });
     </script>
 

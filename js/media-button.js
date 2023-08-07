@@ -1,7 +1,7 @@
 
 /*
 
-<div class="media-button">
+<a class="media-button">
     <div class="media-button-frame">
         <img class="media-button-thumbnail" src="assets/LomThumbnail.png" />
         <div class = "media-button-content">
@@ -13,7 +13,7 @@
             <p class = "media-button-date">April 2021 - Feb 2022</p>
         </div>
     </div>
-</div>
+</a>
 
 .media-button:hover {
     z-index: 1;
@@ -100,8 +100,11 @@ function addMediaButtonEventListeners(entry) {
 }
 
 function makeMediaButton(mediaData) {
-    const entry = document.createElement('div');
+    const entry = document.createElement('a');
     entry.classList.add('media-button');
+    entry.href = mediaData.url;
+    entry.style.textDecoration = 'none';
+    entry.style.color = 'inherit';
 
     const frame = document.createElement('div');
     frame.classList.add('media-button-frame');
