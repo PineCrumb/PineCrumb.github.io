@@ -15,6 +15,27 @@
     </div>
 </div>
 
+.media-button:hover {
+    z-index: 1;
+    cursor: pointer;
+}
+
+.media-button:hover .media-button-frame {
+    top: -10px;
+    background-color: rgb(85, 85, 85);
+    height: calc(100% + 140px);
+    width: calc(100% + 20px);
+    z-index: 1;
+}
+
+.media-button:hover .media-button-thumbnail {
+    filter: grayscale(0%);
+}
+
+.media-button:hover .media-button-reveal-clipping {
+    opacity: 1;
+}
+
 */
 
 function makeMediaButton(mediaData) {
@@ -59,6 +80,34 @@ function makeMediaButton(mediaData) {
     frame.appendChild(image);
     frame.appendChild(content);
     entry.appendChild(frame);
+
+    // Mouse enter event
+    entry.addEventListener('mouseenter', () => {
+        entry.style.cursor = 'pointer';
+
+        frame.style.top = '-10px';
+        frame.style.backgroundColor = 'rgb(85, 85, 85)';
+        frame.style.height = 'calc(100% + 140px)';
+        frame.style.width = 'calc(100% + 20px)';
+        frame.style.zIndex = '1';
+
+        image.style.filter = 'grayscale(0%)';
+        revealClipping.style.opacity = '1';
+    });
+
+    // Mouse leave event
+    entry.addEventListener('mouseleave', () => {
+        entry.style.cursor = '';
+
+        frame.style.top = '';
+        frame.style.backgroundColor = '';
+        frame.style.height = '';
+        frame.style.width = '';
+        frame.style.zIndex = '';
+
+        image.style.filter = '';
+        revealClipping.style.opacity = '';
+    });
 
     return entry;
 }
