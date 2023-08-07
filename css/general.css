@@ -47,7 +47,7 @@ p {
 .page-backdrop {
     background-color: rgb(35, 35, 35);
     position: fixed;
-    height: 1080px;
+    height: 100%;
     width: 1200px;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -80,7 +80,7 @@ p {
 .page-block-header-text-info {
     margin-top: 2px;
     /* background-color: green; */
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 20px;
     color: rgb(200, 200, 200);
 }
