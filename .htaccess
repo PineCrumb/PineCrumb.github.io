@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Redirect requests for "/page" to "/page.html"
+RewriteRule ^page$ page.html [L]
+
+# Redirect requests for "/another-page" to "/another-page.html"
+RewriteRule ^another-page$ another-page.html [L]
