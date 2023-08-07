@@ -28,9 +28,25 @@
             width: 900px;
         }
 
-
-
         /* Me Content */
+        .me-content-backdrop {
+
+            background-color: rgb(40, 40, 40);
+            box-shadow: 0px 3px 10px -3px rgba(10, 10, 10, 0.5);
+            border-radius: 8px;
+
+            border-style: solid;
+            border-color: rgba(70, 70, 70, 0.4);
+            border-width: 1px;
+
+            position: absolute;
+            height: 100%;
+            width: 1200px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
         .me-content-container {
             margin-top: 60px;
 
@@ -121,11 +137,33 @@
             color: rgb(200, 200, 200);
         }
 
-        
         /* Contacts */
         .me-info-contacts-container {
             margin: 6px;
         }
+
+
+
+        /* Skills */
+        .skills-container {
+            /* background-color: aquamarine; */
+
+            position: relative;
+            display: flex;
+            flex-direction: row;
+
+            padding: 0px 40px;
+            margin: 0 auto 10px auto;
+        }
+
+        .skills-frame {
+            background-color: green;
+            
+            margin: 6px 10px 60px 10px;
+            width: 200px;
+            height: 320px;
+        }
+
 
         .grid-test {
             display: grid;
@@ -145,7 +183,8 @@
     <div class = "page-content">
 
         <!-- About Me -->
-        <div class = "page-block" style = "background-color: rgb(40,40,40);">
+        <div class = "page-block">
+            <div class = "me-content-backdrop"></div>
             <div class = "about-container">
                 <div class = "me-content-container">
                     <div class = "me-content-icon-container">
@@ -153,7 +192,7 @@
                     </div>
                     <div class = "me-content-text-container">
                         <header class = "me-content-text-header">👋Hi, I'm PineCrumb.</header>
-                        <div class = "me-content-text-desc">I'm a 16 year old developer from the Philippines. I'm a 16 year old developer from the Philippines. I'm a 16 year old developer from the Philippines.</div>
+                        <div class = "me-content-text-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibhDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi..</div>
                     </div>
                 </div>
                 <div class = "me-info-container">
@@ -175,8 +214,19 @@
         </div>
 
         <div class = "page-block">
-            <div class = "page-container">
+            <div class = "skills-container black-frame">
+                <div class = "skills-frame">
 
+                </div>
+                <div class = "skills-frame">
+
+                </div>
+                <div class = "skills-frame">
+
+                </div>
+                <div class = "skills-frame">
+
+                </div>
             </div>
         </div>
 
