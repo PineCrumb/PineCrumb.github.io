@@ -86,7 +86,7 @@ function SelectSkillButtonMobile(skillButton) {
 }
 
 function makeSkillButton(skillData) {
-    const skillButton = document.createElement('button');
+    const skillButton = document.createElement('div');
     skillButton.classList.add('skill-button');
 
     const skillButtonFrame = document.createElement('div');
