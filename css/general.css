@@ -7,6 +7,17 @@ p {
     margin: 0;
 }
 
+/* Make button like div */
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Roboto', Arial;
+    color: white;
+}
+
 /* Misc */
 .select-disable {
     pointer-events: none;

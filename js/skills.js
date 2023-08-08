@@ -71,7 +71,7 @@ function DeselectSkillButton(skillButton) {
 }
 
 function SelectSkillButtonMobile(skillButton) {
-    
+
     if (mobileSelectedButton == skillButton) {
         DeselectSkillButton(mobileSelectedButton);
         mobileSelectedButton = null;
@@ -86,7 +86,7 @@ function SelectSkillButtonMobile(skillButton) {
 }
 
 function makeSkillButton(skillData) {
-    const skillButton = document.createElement('div');
+    const skillButton = document.createElement('button');
     skillButton.classList.add('skill-button');
 
     const skillButtonFrame = document.createElement('div');
