@@ -12,7 +12,7 @@ Inside skills-frame-content grey-frame:
 
 <div class = "skill-button">
     <div class = "skill-button-frame">
-        <img class = "skill-button-frame-icon select-disable" src = "assets/about-me/me-icon.png"/>
+        <div class = "skill-button-frame-icon select-disable" style = "background-image: url(assets/about-me/me-icon.png)"/></div>
         <div class = "skill-button-frame-title grey-frame-small">HTML</div>
     </div>
 </div>   
@@ -44,6 +44,7 @@ function makeSkillButton(skillData) {
 
     const skillButtonFrame = document.createElement('div');
     skillButtonFrame.classList.add('skill-button-frame');
+    skillButtonFrame.classList.add('select-disable');
 
     const skillButtonFrameIcon = document.createElement('img');
     skillButtonFrameIcon.classList.add('skill-button-frame-icon');
@@ -53,6 +54,7 @@ function makeSkillButton(skillData) {
     const skillButtonFrameTitle = document.createElement('div');
     skillButtonFrameTitle.classList.add('skill-button-frame-title');
     skillButtonFrameTitle.classList.add('grey-frame-small');
+    skillButtonFrameTitle.classList.add('select-disable');
     skillButtonFrameTitle.textContent = skillData.title;
 
     skillButtonFrame.appendChild(skillButtonFrameIcon);
