@@ -52,6 +52,7 @@ function makeSkillsFrame(skillsData) {
     return skillsFrame;
 }
 
+var mobileId = 0
 var mobileSelectedButton = null;
 
 function SelectSkillButton(skillButton) {
@@ -80,11 +81,21 @@ function SelectSkillButtonMobile(skillButton) {
         return;
     }
 
+    mobileId += 1;
+    var cacheId = mobileId;
+
     if (mobileSelectedButton) {
         DeselectSkillButton(mobileSelectedButton);
     }
+
     SelectSkillButton(skillButton);
     mobileSelectedButton = skillButton;
+
+    setTimeout(() => {
+        if (cacheId != mobileId) return;
+        DeselectSkillButton(mobileSelectedButton);
+        mobileSelectedButton = null;
+    }, 3000);
 }
 
 function makeSkillButton(skillData) {
@@ -121,11 +132,7 @@ function makeSkillButton(skillData) {
     });
 
     skillButton.addEventListener('touchstart', (event) => {
-        SelectSkillButton(skillButton)
-    }, true);
-
-    skillButton.addEventListener('touchend', (event) => {
-        DeselectSkillButton(skillButton)
+        SelectSkillButtonMobile(skillButton)
     }, true);
 
     return skillButton;
