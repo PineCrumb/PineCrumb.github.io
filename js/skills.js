@@ -88,7 +88,8 @@ function SelectSkillButtonMobile(skillButton) {
         DeselectSkillButton(mobileSelectedButton);
     }
 
-    SelectSkillButton(skillButton);
+    setTimeout(() => {SelectSkillButton(skillButton);}, 40); // small set timeout to prevent an issue with z-clipping on mobile from new button being selected at same time
+
     mobileSelectedButton = skillButton;
 
     setTimeout(() => {
