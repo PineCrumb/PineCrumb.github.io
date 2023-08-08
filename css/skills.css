@@ -14,8 +14,6 @@
 }
 
 .skills-frame-content {
-    /* background-color: violet; */
-
     display: grid;
     justify-content: center;
     grid-template-columns: 80px 80px;
@@ -24,6 +22,14 @@
     grid-gap: 10px;
 
     height: 200px;
+}
+
+@media screen and (max-width: 1100px) {
+    .skills-frame-content {
+        grid-template-columns: 90px 90px;
+        grid-auto-rows: 90px;
+        height: 220px;
+    }
 }
 
 /* Skill Button */
@@ -39,7 +45,7 @@
 .skill-button-frame {
     background-color: rgb(35, 35, 35);
 
-    border-radius: 8px;
+    border-radius: 10%;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0);

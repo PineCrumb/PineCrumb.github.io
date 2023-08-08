@@ -1,5 +1,6 @@
 .media-button {
     height: 240px;
+    width: 280px;
     position: relative;
     z-index: 10;
 }
@@ -93,4 +94,32 @@
     position: absolute;
     bottom: 8px;
     z-index: 2;
+}
+
+@media screen and (max-width: 1100px) {
+    .media-button {
+       height: 360px;
+       width: 430px;
+    }
+
+    .media-button-frame {
+        border-radius: 14px;
+    }
+
+    .media-button-title{
+        font-size: 20px;
+    }
+
+    .media-button-sub-title{
+        font-size: 20px;
+    }
+
+    .media-button-reveal-clipping {
+        font-size: 16px;
+    }
+
+    .media-button-date{
+        font-size: 16px;
+    }
+
 }
