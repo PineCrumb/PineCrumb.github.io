@@ -59,6 +59,7 @@ function SelectSkillButton(skillButton) {
     const skillButtonFrameTitle = skillButton.querySelector('.skill-button-frame-title');
     skillButtonFrame.style.top = '-10px';
     skillButtonFrame.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+    skillButtonFrame.style.boxShadow = '0px 8px 10px -2px rgba(0, 0, 0, 0.5)';
     skillButtonFrameTitle.style.opacity = '1';
 }
 
@@ -67,6 +68,7 @@ function DeselectSkillButton(skillButton) {
     const skillButtonFrameTitle = skillButton.querySelector('.skill-button-frame-title');
     skillButtonFrame.style.top = '';
     skillButtonFrame.style.borderColor = '';
+    skillButtonFrame.style.boxShadow = '';
     skillButtonFrameTitle.style.opacity = '';
 }
 
@@ -96,7 +98,7 @@ function makeSkillButton(skillData) {
     const skillButtonFrameIcon = document.createElement('img');
     skillButtonFrameIcon.classList.add('skill-button-frame-icon');
     skillButtonFrameIcon.classList.add('select-disable');
-    skillButtonFrameIcon.src = skillData.iconSrc;
+    skillButtonFrameIcon.src = skillData.imageSrc;
 
     const skillButtonFrameTitle = document.createElement('div');
     skillButtonFrameTitle.classList.add('skill-button-frame-title');

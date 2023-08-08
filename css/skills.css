@@ -35,8 +35,7 @@
 
 .skill-button-frame {
     background-color: rgb(35, 35, 35);
-    pointer-events: none;
-
+    
     border-radius: 8px;
     border-style: solid;
     border-width: 1px;
@@ -47,8 +46,6 @@
     align-items: left;
     flex-direction: column;
 
-    pointer-events: none;
-
     position: absolute;
     top: 0px;
     height: 100%;
@@ -57,13 +54,17 @@
 
     transition:
         top 0.2s,
-        border-color 0.2s;
+        border-color 0.2s,
+        box-shadow 0.2s;
 }
 
 .skill-button-frame-icon {
-    margin: 12%;
-    pointer-events: none;
-    user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 76%;
 }
 
 .skill-button-frame-title {
@@ -71,6 +72,9 @@
     opacity: 0;
     font-size: 16px;
     padding: 2px 5px;
+
+    /* prevent text from wrapping */
+    white-space: nowrap;
 
     position: absolute;
     top: 4px;
