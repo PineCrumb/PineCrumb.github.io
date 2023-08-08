@@ -99,7 +99,7 @@ button {
     display: grid;
     grid-template-rows: 40px 1fr;
 
-    margin: 20px auto 0px auto;
+    margin: 40px auto 0px auto;
 
     width: 900px;
 }
