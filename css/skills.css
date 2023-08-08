@@ -25,8 +25,58 @@
     gap: 10px;
 }
 
+/* Skill Button */
+.skill-button {
+    position: relative;
+    z-index: 0;
+    width: 80px;
+    height: 80px;
+}
 
+.skill-button-frame {
+    background-color: rgb(35, 35, 35);
+    pointer-events: none;
 
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+
+    display: flex;
+    justify-content: top;
+    align-items: left;
+    flex-direction: column;
+
+    pointer-events: none;
+
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    transition:
+        top 0.2s,
+        border-color 0.2s;
+}
+
+.skill-button-frame-icon {
+    margin: 12%;
+}
+
+.skill-button-frame-title {
+    
+    opacity: 0;
+    font-size: 12px;
+    padding: 2px 5px;
+
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    transition: opacity 0.2s;
+}
 
 
 .grid-test {
