@@ -3,9 +3,7 @@
 .skills-frame {
     /* background-color: green; */
 
-    margin: 14px 10px 34px 10px;
-    height: 300px;
-    width: 200px;
+    margin: 14px 6px 34px 6px;
 }
 
 .skills-frame-header {
@@ -17,34 +15,34 @@
 
 .skills-frame-content {
     /* background-color: violet; */
-    padding: 10px 0px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
+
+    display: grid;
     justify-content: center;
-    gap: 10px;
+    grid-template-columns: 80px 80px;
+    grid-auto-rows: 80px;
+    padding: 10px;
+    grid-gap: 10px;
+
+    height: 200px;
 }
 
 /* Skill Button */
 .skill-button {
     position: relative;
     z-index: 10;
-    width: 80px;
-    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .skill-button-frame {
     background-color: rgb(35, 35, 35);
-    
+
     border-radius: 8px;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0);
-
-    display: flex;
-    justify-content: top;
-    align-items: left;
-    flex-direction: column;
 
     position: absolute;
     top: 0px;
@@ -64,7 +62,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    height: 76%;
+    height: 75%;
 }
 
 .skill-button-frame-title {
@@ -84,13 +82,4 @@
     z-index: 20;
 
     transition: opacity 0.2s;
-}
-
-
-.grid-test {
-    display: grid;
-    grid-template-columns: 270px 270px 270px;
-    grid-gap: 20px;
-
-    margin: 0 auto;
 }
