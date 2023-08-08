@@ -121,12 +121,10 @@ function makeSkillButton(skillData) {
     });
 
     skillButton.addEventListener('touchstart', (event) => {
-        if (isUsingMouse) return;
         SelectSkillButton(skillButton)
     }, true);
 
     skillButton.addEventListener('touchend', (event) => {
-        if (isUsingMouse) return;
         DeselectSkillButton(skillButton)
     }, true);
 
