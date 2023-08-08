@@ -101,18 +101,18 @@ function makeSkillButton(skillData) {
     skillButtonFrame.appendChild(skillButtonFrameTitle);
     skillButton.appendChild(skillButtonFrame);
 
-    skillButton.addEventListener('mouseenter', () => {
-        if (!isUsingMouse) return;
-        SelectSkillButton(skillButton)
-    });
+    // skillButton.addEventListener('mouseenter', () => {
+    //     if (!isUsingMouse) return;
+    //     SelectSkillButton(skillButton)
+    // });
 
-    skillButton.addEventListener('mouseleave', () => {
-        if (!isUsingMouse) return;
-        DeselectSkillButton(skillButton)
-    });
+    // skillButton.addEventListener('mouseleave', () => {
+    //     if (!isUsingMouse) return;
+    //     DeselectSkillButton(skillButton)
+    // });
 
     skillButton.addEventListener('touchstart', (event) => {
-        if (isUsingMouse) return;
+        //if (isUsingMouse) return;
         SelectSkillButtonMobile(skillButton)
     });
 

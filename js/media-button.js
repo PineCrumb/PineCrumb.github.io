@@ -88,15 +88,6 @@ function addMediaButtonEventListeners(mediaButton) {
         removeHoverStyles(frame, image, revealClipping);
         mediaButton.style.cursor = '';
     });
-
-    // mediaButton.addEventListener('touchstart', (event) => {
-    //     applyHoverStyles(frame, image, revealClipping);
-    //     event.preventDefault(); // Prevents scrolling while touching
-    // });
-
-    // mediaButton.addEventListener('touchend', () => {
-    //     removeHoverStyles(frame, image, revealClipping);
-    // });
 }
 
 function makeMediaButton(mediaData) {
