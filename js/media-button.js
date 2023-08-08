@@ -73,38 +73,38 @@ function removeHoverStyles(frame, image, revealClipping) {
     revealClipping.style.opacity = '';
 }
 
-function addMediaButtonEventListeners(entry) {
-    const frame = entry.querySelector('.media-button-frame');
-    const image = entry.querySelector('.media-button-thumbnail');
-    const revealClipping = entry.querySelector('.media-button-reveal-clipping');
+function addMediaButtonEventListeners(mediaButton) {
+    const frame = mediaButton.querySelector('.media-button-frame');
+    const image = mediaButton.querySelector('.media-button-thumbnail');
+    const revealClipping = mediaButton.querySelector('.media-button-reveal-clipping');
 
-    entry.addEventListener('mouseenter', () => {
+    mediaButton.addEventListener('mouseenter', () => {
         if (!isUsingMouse) return;
         applyHoverStyles(frame, image, revealClipping);
-        entry.style.cursor = 'pointer';
+        mediaButton.style.cursor = 'pointer';
     });
 
-    entry.addEventListener('mouseleave', () => {
+    mediaButton.addEventListener('mouseleave', () => {
         removeHoverStyles(frame, image, revealClipping);
-        entry.style.cursor = '';
+        mediaButton.style.cursor = '';
     });
 
-    // entry.addEventListener('touchstart', (event) => {
+    // mediaButton.addEventListener('touchstart', (event) => {
     //     applyHoverStyles(frame, image, revealClipping);
     //     event.preventDefault(); // Prevents scrolling while touching
     // });
 
-    // entry.addEventListener('touchend', () => {
+    // mediaButton.addEventListener('touchend', () => {
     //     removeHoverStyles(frame, image, revealClipping);
     // });
 }
 
 function makeMediaButton(mediaData) {
-    const entry = document.createElement('a');
-    entry.classList.add('media-button');
-    entry.href = mediaData.url;
-    entry.style.textDecoration = 'none';
-    entry.style.color = 'inherit';
+    const mediaButton = document.createElement('a');
+    mediaButton.classList.add('media-button');
+    mediaButton.href = mediaData.url;
+    mediaButton.style.textDecoration = 'none';
+    mediaButton.style.color = 'inherit';
 
     const frame = document.createElement('div');
     frame.classList.add('media-button-frame');
@@ -143,9 +143,9 @@ function makeMediaButton(mediaData) {
     content.appendChild(date);
     frame.appendChild(image);
     frame.appendChild(content);
-    entry.appendChild(frame);
+    mediaButton.appendChild(frame);
 
-    addMediaButtonEventListeners(entry);
+    addMediaButtonEventListeners(mediaButton);
 
-    return entry;
+    return mediaButton;
 }
