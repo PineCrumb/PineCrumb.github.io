@@ -20,17 +20,17 @@ Inside skills-frame-content grey-frame:
 */
 
 // easy code for checking if mobile or not
-// var isUsingMouse = false;
+var isUsingMouse = false;
 
-// // Detect mouse movement
-// document.addEventListener('mousemove', () => {
-//   isUsingMouse = true;
-// });
+// Detect mouse movement
+document.addEventListener('mousemove', () => {
+  isUsingMouse = true;
+});
 
-// // Detect touch interactions
-// document.addEventListener('touchstart', () => {
-//   isUsingMouse = false;
-// });
+// Detect touch interactions
+document.addEventListener('touchstart', () => {
+  isUsingMouse = false;
+});
 
 function makeSkillsFrame(skillsData) {
     const skillsFrame = document.createElement('div');
@@ -110,23 +110,23 @@ function makeSkillButton(skillData) {
     skillButtonFrame.appendChild(skillButtonFrameTitle);
     skillButton.appendChild(skillButtonFrame);
 
-    // skillButton.addEventListener('mouseenter', () => {
-    //     //if (!isUsingMouse) return;
-    //     SelectSkillButton(skillButton)
-    // });
+    skillButton.addEventListener('mouseenter', () => {
+        if (!isUsingMouse) return;
+        SelectSkillButton(skillButton)
+    });
 
-    // skillButton.addEventListener('mouseleave', () => {
-    //     //if (!isUsingMouse) return;
-    //     DeselectSkillButton(skillButton)
-    // });
+    skillButton.addEventListener('mouseleave', () => {
+        if (!isUsingMouse) return;
+        DeselectSkillButton(skillButton)
+    });
 
     skillButton.addEventListener('touchstart', (event) => {
-        //if (isUsingMouse) return;
+        if (isUsingMouse) return;
         SelectSkillButton(skillButton)
     }, true);
 
     skillButton.addEventListener('touchend', (event) => {
-        //if (isUsingMouse) return;
+        if (isUsingMouse) return;
         DeselectSkillButton(skillButton)
     }, true);
 

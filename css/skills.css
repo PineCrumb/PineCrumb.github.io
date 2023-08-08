@@ -28,6 +28,7 @@
 /* Skill Button */
 .skill-button {
     position: relative;
+    z-index: 10;
     width: 80px;
     height: 80px;
 }
