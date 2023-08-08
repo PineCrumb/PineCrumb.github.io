@@ -12,7 +12,7 @@ Inside skills-frame-content grey-frame:
 
 <div class = "skill-button">
     <div class = "skill-button-frame">
-        <div class = "skill-button-frame-icon select-disable" style = "background-image: url(assets/about-me/me-icon.png)"/></div>
+        <div class = "skill-button-frame-icon" style = "background-image: url(assets/about-me/me-icon.png)"/></div>
         <div class = "skill-button-frame-title grey-frame-small">HTML</div>
     </div>
 </div>   
@@ -25,6 +25,7 @@ function makeSkillsFrame(skillsData) {
 
     const skillsFrameHeader = document.createElement('div');
     skillsFrameHeader.classList.add('skills-frame-header');
+    skillsFrameHeader.classList.add('select-disable');
     skillsFrameHeader.textContent = skillsData.title;
 
     const skillsFrameContent = document.createElement('div');
@@ -81,14 +82,20 @@ function makeSkillButton(skillData) {
         MouseEnter()
     });
 
-    skillButton.addEventListener('mouseleave', MouseLeave);
+    skillButton.addEventListener('mouseenter', () => {
+        if (!isUsingMouse) return;
+        MouseLeave()
+    });
 
     skillButton.addEventListener('touchstart', (event) => {
         if (isUsingMouse) return;
         MouseEnter()
     });
 
-    skillButton.addEventListener('touchend', MouseLeave);
+    skillButton.addEventListener('touchend', () => {
+        if (isUsingMouse) return;
+        MouseLeave()
+    });
 
     return skillButton;
 }
