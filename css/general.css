@@ -17,15 +17,6 @@ p {
     user-select: none;
 }
 
-.select-enable { 
-    pointer-events: none;
-    -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -o-user-select: text;
-    user-select: text;
-}
-
 /* Frames */
 .grey-frame {
     background-color: rgb(50, 50, 50);

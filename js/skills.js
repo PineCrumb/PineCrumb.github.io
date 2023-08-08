@@ -39,6 +39,32 @@ function makeSkillsFrame(skillsData) {
     return skillsFrame;
 }
 
+const mobileSelectedButton = null;
+
+function SelectSkillButton(skillButton) {
+    const skillButtonFrame = skillButton.querySelector('.skill-button-frame');
+    const skillButtonFrameTitle = skillButton.querySelector('.skill-button-frame-title');
+    skillButtonFrame.style.top = '-10px';
+    skillButtonFrame.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+    skillButtonFrameTitle.style.opacity = '1';
+}
+
+function DeselectSkillButton(skillButton) {
+    const skillButtonFrame = skillButton.querySelector('.skill-button-frame');
+    const skillButtonFrameTitle = skillButton.querySelector('.skill-button-frame-title');
+    skillButtonFrame.style.top = '';
+    skillButtonFrame.style.borderColor = '';
+    skillButtonFrameTitle.style.opacity = '';
+}
+
+function SelectSkillButtonMobile(skillButton) {
+    if (mobileSelectedButton) {
+        DeselectSkillButton(mobileSelectedButton);
+    }
+    SelectSkillButton(skillButton);
+    mobileSelectedButton = skillButton;
+}
+
 function makeSkillButton(skillData) {
     const skillButton = document.createElement('div');
     skillButton.classList.add('skill-button');
@@ -62,39 +88,19 @@ function makeSkillButton(skillData) {
     skillButtonFrame.appendChild(skillButtonFrameTitle);
     skillButton.appendChild(skillButtonFrame);
 
-
-    function MouseEnter() {
-        skillButtonFrame.style.top = '-10px';
-        skillButtonFrame.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-        skillButtonFrameTitle.style.opacity = '1';
-        //skillButton.style.cursor = 'pointer';
-    }
-
-    function MouseLeave() {
-        skillButtonFrame.style.top = '';
-        skillButtonFrame.style.borderColor = '';
-        skillButtonFrameTitle.style.opacity = '';
-        //skillButton.style.cursor = '';
-    }
-
     skillButton.addEventListener('mouseenter', () => {
         if (!isUsingMouse) return;
-        MouseEnter()
+        SelectSkillButton(skillButton)
     });
 
-    skillButton.addEventListener('mouseenter', () => {
+    skillButton.addEventListener('mouseleave', () => {
         if (!isUsingMouse) return;
-        MouseLeave()
+        DeselectSkillButton(skillButton)
     });
 
     skillButton.addEventListener('touchstart', (event) => {
         if (isUsingMouse) return;
-        MouseEnter()
-    });
-
-    skillButton.addEventListener('touchend', () => {
-        if (isUsingMouse) return;
-        MouseLeave()
+        SelectSkillButtonMobile(skillButton)
     });
 
     return skillButton;
