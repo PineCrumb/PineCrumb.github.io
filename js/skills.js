@@ -63,14 +63,14 @@ function makeSkillButton(skillData) {
         skillButtonFrame.style.top = '-10px';
         skillButtonFrame.style.borderColor = 'rgba(255, 255, 255, 0.3)';
         skillButtonFrameTitle.style.opacity = '1';
-        skillButton.style.cursor = 'pointer';
+        //skillButton.style.cursor = 'pointer';
     }
 
     function MouseLeave() {
         skillButtonFrame.style.top = '';
         skillButtonFrame.style.borderColor = '';
         skillButtonFrameTitle.style.opacity = '';
-        skillButton.style.cursor = '';
+        //skillButton.style.cursor = '';
     }
 
     skillButton.addEventListener('mouseenter', () => {

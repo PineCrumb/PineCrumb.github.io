@@ -63,6 +63,7 @@
 .skill-button-frame-icon {
     margin: 12%;
     pointer-events: none;
+    user-select: none;
 }
 
 .skill-button-frame-title {
