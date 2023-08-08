@@ -19,6 +19,19 @@ Inside skills-frame-content grey-frame:
 
 */
 
+// easy code for checking if mobile or not
+var isUsingMouse = false;
+
+// Detect mouse movement
+document.addEventListener('mousemove', () => {
+  isUsingMouse = true;
+});
+
+// Detect touch interactions
+document.addEventListener('touchstart', () => {
+  isUsingMouse = false;
+});
+
 function makeSkillsFrame(skillsData) {
     const skillsFrame = document.createElement('div');
     skillsFrame.classList.add('skills-frame');
@@ -39,7 +52,7 @@ function makeSkillsFrame(skillsData) {
     return skillsFrame;
 }
 
-const mobileSelectedButton = null;
+var mobileSelectedButton = null;
 
 function SelectSkillButton(skillButton) {
     const skillButtonFrame = skillButton.querySelector('.skill-button-frame');

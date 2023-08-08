@@ -39,7 +39,7 @@
 */
 
 // easy code for checking if mobile or not
-let isUsingMouse = false;
+var isUsingMouse = false;
 
 // Detect mouse movement
 document.addEventListener('mousemove', () => {
