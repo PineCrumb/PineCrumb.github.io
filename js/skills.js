@@ -71,6 +71,7 @@ function DeselectSkillButton(skillButton) {
 }
 
 function SelectSkillButtonMobile(skillButton) {
+    if (mobileSelectedButton == skillButton) return;
     if (mobileSelectedButton) {
         DeselectSkillButton(mobileSelectedButton);
     }
