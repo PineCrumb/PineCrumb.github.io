@@ -54,18 +54,22 @@ document.addEventListener('touchstart', () => {
 function applyHoverStyles(mediaButton, frame, image, revealClipping) {
     mediaButton.style.zIndex = '100'
     mediaButton.style.cursor = 'pointer';
+
     frame.style.top = '-10px';
     frame.style.backgroundColor = 'rgb(85, 85, 85)';
     frame.style.height = 'calc(100% + 140px)';
     frame.style.width = 'calc(100% + 20px)';
 
     image.style.filter = 'grayscale(0%)';
+
     revealClipping.style.opacity = '1';
+    revealClipping.style.width = 'calc(100% - 20px)';
 }
 
 function removeHoverStyles(mediaButton, frame, image, revealClipping) {
     mediaButton.style.zIndex = ''
     mediaButton.style.cursor = '';
+
     frame.style.top = '';
     frame.style.backgroundColor = '';
     frame.style.height = '';
@@ -73,7 +77,9 @@ function removeHoverStyles(mediaButton, frame, image, revealClipping) {
     frame.style.zIndex = '';
 
     image.style.filter = '';
+    
     revealClipping.style.opacity = '';
+    revealClipping.style.width = '';
 }
 
 function addMediaButtonEventListeners(mediaButton) {
