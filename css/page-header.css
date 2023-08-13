@@ -20,6 +20,8 @@
     height: 100%;
     width: calc(100% - 900px);
     min-width: 900px;
+    max-width: 1050px;
+
     margin: 0px auto;
     padding: 0px 10px;
 
