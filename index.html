@@ -14,6 +14,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/page-header.css" />
+    <link rel="stylesheet" href="css/project.css" />
     <link rel="stylesheet" href="css/basic-button.css" />
     <link rel="stylesheet" href="css/media-button.css" />
     <link rel="stylesheet" href="css/skills.css" />
@@ -51,12 +52,6 @@
             z-index: -1;
         }
 
-        @media screen and (max-width: 1100px) {
-            .me-content-backdrop {
-                width: calc(100vw - 20px);
-            }
-        }
-
         .me-content-container {
             margin-top: 60px;
 
@@ -72,6 +67,9 @@
 
         .me-content-icon {
             width: 100%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         /* Me Content Text */
@@ -192,6 +190,20 @@
             margin: 0 auto;
         }
 
+
+        /* Mobile Sizing through CSS */
+        @media screen and (max-width: 1100px) {
+            .me-content-backdrop {
+                width: calc(100vw - 20px);
+            }
+            .me-content-container {
+                grid-template-columns: 35% 1fr;
+            }
+            .me-info-container {
+                grid-template-columns: 35% 1fr;
+            }
+        }
+
         /* More Projects */
 
     </style>
@@ -199,11 +211,24 @@
 
 <body>
 
+    <!-- Scripts -->
+    <script src="js/is-using-mouse.js"></script>
+    <script src="js/projects-data.js"></script>
+    <script src="js/page-header.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/basic-button.js"></script>
+    <script src="js/media-button.js"></script>
+    <script src="js/skills.js"></script>
+
     <!-- Page Backdrop -->
     <div class = "page-backdrop"></div>
 
     <!-- Page Content -->
     <div class = "page-content">
+
+        <script>
+            const pageContent = document.querySelector('.page-content')
+        </script>
 
         <!-- About Me -->
         <div class = "page-block" id = "aboutMeHeader">
@@ -215,7 +240,10 @@
                     </div>
                     <div class = "me-content-text-container">
                         <header class = "me-content-text-header">👋 Hi, I'm PineCrumb.</header>
-                        <div class = "me-content-text-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibhDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi..</div>
+                        <div class = "me-content-text-desc">
+                            <p>I'm a 23 year old developer and former SCAD student in New Hampshire who has been <span class = "text-bold">making Roblox games for 10+ years</span>.</p>
+                            <p>As a Roblox Developer, I’ve had the privilege of working with fantastic colleague and companies over the years, and am extremely fortunate and proud to call myself apart of the Roblox community. <span class = "text-bold">Learn about my career and passion here</span>.</p>
+                        </div>
                     </div>
                 </div>
                 <div class = "me-info-container">
@@ -230,10 +258,21 @@
             </div>
         </div>
 
+        <!-- Demo Real -->
+        <script>
+            const projectContent = makeProjectContent({
+                src: 'https://www.youtube.com/embed/ly36kn0ug4k',
+                title: 'Demo Reel',
+                desc: "Although I'm a programmer by trade, I value the entire game development proccess and find passion in developing projects from start to finish. I love working on teams and forming relationships that are not only productive, but also engaging, taking initative when needed and fostering collaboration to develop fantastic experiences for millions of users.",
+            });
+            projectContent.id = 'demoReelHeader';
+            pageContent.appendChild(projectContent);
+        </script>
+
         <!-- My Skills -->
         <div class = "page-block-header-container" id = "mySkillsHeader">
             <div class = "page-block-header-text-header">My Skills</div>
-            <div class = "page-block-header-text-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            <div class = "page-block-header-text-info">Languages + software I develop and create with. Hover over / tap an icon to learn more.</div>
         </div>
 
         <div class = "page-block">
@@ -266,19 +305,13 @@
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="js/is-using-mouse.js"></script>
-    <script src="js/projects-data.js"></script>
-    <script src="js/page-header.js"></script>
-    <script src="js/basic-button.js"></script>
-    <script src="js/media-button.js"></script>
-    <script src="js/skills.js"></script>
-
     <!-- JS Main -->
     <script type="module">
 
         // Page Header
+
         const aboutMeHeader = document.getElementById('aboutMeHeader');
+        const demoReelHeader = document.getElementById('demoReelHeader');
         const mySkillsHeader = document.getElementById('mySkillsHeader');
         const gameCareerHeader = document.getElementById('gameCareerHeader');
         const moreProjectsHeader = document.getElementById('moreProjectsHeader');
@@ -289,6 +322,11 @@
                 hoverHeight: '4px',
                 onClick: () => {window.scrollTo({top: aboutMeHeader.offsetTop, behavior: 'smooth'});},
                
+            },
+            {
+                text: "Demo Reel",
+                hoverHeight: '4px',
+                onClick: () => {window.scrollTo({top: demoReelHeader.offsetTop - 30, behavior: 'smooth'});},
             },
             {
                 text: "My Skills",
@@ -317,7 +355,7 @@
                 backgroundColor: 'rgb(120, 120, 120)',
                 height: '50px',
                 hoverHeight: '6px',
-                url: "mailto:Pinecrumb.business@gmail.com?subject=&body=Hello%20Pinecrumb,%0A%0AI%20have%20a%20question%20for%20you.",
+                url: "mailto:Pinecrumb.business@gmail.com",
                 newTab: true,
             },
             {
@@ -396,6 +434,10 @@
                         imageSrc: "assets/skills/logo-c-sharp.svg",
                     },
                     {
+                        title: "HTML + CSS + JavaScript",
+                        imageSrc: "assets/skills/logo-website.svg",
+                    },
+                    {
                         title: "Unreal Blueprints",
                         imageSrc: "assets/skills/logo-unreal.svg",
                     },
@@ -409,30 +451,46 @@
                         imageSrc: "assets/skills/logo-roblox.svg",
                     },
                     {
-                        title: "Unity",
-                        imageSrc: "assets/skills/logo-unity.svg",
-                    },
-                    {
                         title: "Unreal",
                         imageSrc: "assets/skills/logo-unreal.svg",
+                    },
+                    {
+                        title: "Unity",
+                        imageSrc: "assets/skills/logo-unity.svg",
                     },
                 ]
             },
             {
                 title: "Game Art",
                 skillDatas: [
+                {
+                        title: "Blender",
+                        imageSrc: "assets/skills/logo-blender.svg",
+                    },
                     {
-                        title: "Roblox",
-                        imageSrc: "assets/skills/logo-roblox.svg",
-                    }
+                        title: "Autodesk Maya",
+                        imageSrc: "assets/skills/logo-maya.svg",
+                    },
+                    {
+                        title: "Substance Painter",
+                        imageSrc: "assets/skills/logo-substance-painter.svg",
+                    },
                 ]
             },
             {
                 title: "Other",
                 skillDatas: [
                     {
-                        title: "Roblox",
-                        imageSrc: "assets/skills/logo-roblox.svg",
+                        title: "Adobe Photoshop",
+                        imageSrc: "assets/skills/logo-adobe-photoshop.svg",
+                    },
+                    {
+                        title: "Adobe Illustrator",
+                        imageSrc: "assets/skills/logo-adobe-illustrator.svg",
+                    },
+                    {
+                        title: "Adobe Premiere Pro",
+                        imageSrc: "assets/skills/logo-adobe-premiere.svg",
                     }
                 ]
             },

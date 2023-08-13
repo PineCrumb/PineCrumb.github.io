@@ -33,13 +33,13 @@
             const pageContent = document.querySelector('.page-content');
 
             const pageHeader = newPageHeader([
-            {
-                text: "Back Home",
-                onClick: () => {window.history.back()},
-                hoverHeight: '4px',
-            },
-        ]);
-        document.body.appendChild(pageHeader);
+                {
+                    text: "Back Home",
+                    onClick: goBackHome,
+                    hoverHeight: '4px',
+                },
+            ]);
+            document.body.appendChild(pageHeader);
 
             const projectHeader = makeProjectHeader(projectsData.RobberySimulator);
             pageContent.appendChild(projectHeader);

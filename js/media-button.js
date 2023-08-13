@@ -102,11 +102,11 @@ function makeMediaButton(projectData) {
     const content = document.createElement('div');
     content.classList.add('media-button-content');
 
-    const title = document.createElement('p');
+    const title = document.createElement('div');
     title.classList.add('media-button-title');
     title.textContent = projectData.title;
 
-    const subTitle = document.createElement('p');
+    const subTitle = document.createElement('div');
     subTitle.classList.add('media-button-sub-title');
     subTitle.textContent = projectData.subTitle;
 
@@ -117,7 +117,7 @@ function makeMediaButton(projectData) {
     revealContent.classList.add('media-button-reveal-content');
     revealContent.textContent = projectData.content;
 
-    const date = document.createElement('p');
+    const date = document.createElement('div');
     date.classList.add('media-button-date');
     date.textContent = projectData.date;
 

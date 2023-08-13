@@ -45,6 +45,7 @@ var mobileSelectedButton = null;
 function SelectSkillButton(skillButton) {
     const skillButtonFrame = skillButton.querySelector('.skill-button-frame');
     const skillButtonFrameTitle = skillButton.querySelector('.skill-button-frame-title');
+    skillButtonFrame.style.backgroundColor = 'rgb(60,60,60)';
     skillButtonFrame.style.top = '-10px';
     skillButtonFrame.style.borderColor = 'rgba(255, 255, 255, 0.3)';
     skillButtonFrame.style.boxShadow = '0px 8px 10px -2px rgba(0, 0, 0, 0.5)';
@@ -54,6 +55,7 @@ function SelectSkillButton(skillButton) {
 function DeselectSkillButton(skillButton) {
     const skillButtonFrame = skillButton.querySelector('.skill-button-frame');
     const skillButtonFrameTitle = skillButton.querySelector('.skill-button-frame-title');
+    skillButtonFrame.style.backgroundColor = '';
     skillButtonFrame.style.top = '';
     skillButtonFrame.style.borderColor = '';
     skillButtonFrame.style.boxShadow = '';

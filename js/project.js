@@ -37,6 +37,18 @@
 
 */
 
+// Helpful project globals
+function goBackHome() {
+    const previousURL = document.referrer;
+    const indexPageURL = 'index.html';
+
+    if (previousURL.includes(indexPageURL)) {
+        window.history.back();
+    } else {
+        window.location.href = indexPageURL;
+    }
+}
+
 function makeProjectContent(projectContentData) {
     const divPageBlock = document.createElement("div");
     divPageBlock.className = "page-block";

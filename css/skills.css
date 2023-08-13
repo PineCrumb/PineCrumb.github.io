@@ -57,6 +57,7 @@
     z-index: -1;
 
     transition:
+        background-color 0.2s,
         top 0.2s,
         border-color 0.2s,
         box-shadow 0.2s;

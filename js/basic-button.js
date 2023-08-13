@@ -28,6 +28,7 @@ class BasicButton {
     }
 
     select() {
+        this.element.style.cursor = 'pointer';
         this.basicButtonFrame.style.top = this.hoverHeight;
         this.basicButtonFrame.style.borderColor = 'rgba(255, 255, 255, 0.6)';
         this.basicButtonFrame.style.boxShadow = '0px 8px 10px -2px rgba(0, 0, 0, 0.5)';
@@ -35,6 +36,7 @@ class BasicButton {
     }
 
     deselect() {
+        this.element.style.cursor = '';
         this.basicButtonFrame.style.top = '';
         this.basicButtonFrame.style.borderColor = '';
         this.basicButtonFrame.style.boxShadow = '';
