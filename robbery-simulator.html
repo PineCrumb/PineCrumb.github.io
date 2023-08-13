@@ -3,7 +3,7 @@
 
     <head>
         <!-- Meta -->
-        <title>PineCrumb's Portfolio</title>
+        <title>PineCrumb - Robbery Simulator</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,161 +12,46 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="css/general.css" />
-        <link rel="stylesheet" href="css/media-button.css" />
-        <link rel="stylesheet" href="css/skills.css" />
-
-        <style>
-
-        /* Project Header */
-        .project-header {
-            /* background-color: yellow; */
-
-            display: flex;
-            flex-direction: column;
-
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .project-header-logo {
-            /* background-color: blueviolet; */
-
-            position: relative;
-            height: 200px;
-            margin-top: 20px;
-            margin-bottom: 12px;
-        }
-
-        .project-header-logo-img {
-            /* background-color: blue; */
-
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: calc(100% + 70px);
-        }
-
-        .project-header-info {
-            /* background-color: blue; */
-
-            position: relative;
-            display: flex;
-            flex-direction: column;
-
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .project-header-info-title {
-            /* background-color: aqua; */
-    
-            font-size: 46px;
-            font-weight: 900;
-            text-align: center;
-        }
-
-        .project-header-info-subtitle {
-            /* background-color: aqua; */
-    
-            font-size: 32px;
-            font-weight: 900;
-            margin-bottom: 16px;
-            text-align: center;
-        }
-
-        .project-header-info-date {
-            /* background-color: green; */
-
-            margin: 4px auto 20px auto;
-            color: rgb(200, 200, 200);
-            font-size: 22px;
-            text-align: center;
-        }
-
-        .project-header-info-box {
-            /* background-color: red; */
-
-            display: inline-block;
-            padding: 20px 14px;
-
-            margin: 0px auto;
-            color: rgb(200, 200, 200);
-        }
-
-        .project-header-info-box-text {
-
-            display: inline-block;
-            font-size: 22px;
-            font-weight: 700;
-            color: rgb(255, 255, 255);
-        }
-
-
-        .project-content {
-            /* background-color: red; */
-
-            display: grid;
-            grid-template-columns: 0.9fr 1fr;
-
-            width: calc(100% - 40px);
-            margin: 30px auto 0 auto;
-        }
-
-        .project-content-media {
-            background-color: blue;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            width: 100%;
-            height: 100%;
-        }
-
-        .project-content-media-content {
-            /* background-color: red; */
-
-            position: relative;
-            width: calc(100% - 40px);
-            margin: 20px auto;
-        }
-
-        </style>
+        <link rel="stylesheet" href="css/page-header.css" />
+        <link rel="stylesheet" href="css/basic-button.css" />
+        <link rel="stylesheet" href="css/project.css" />
     </head>
 
     <body>
-        <!-- Page Backdrop -->
+
         <div class = "page-backdrop"></div>
+        <div class = "page-content"> </div>
 
-        <!-- Page Content -->
-        <div class = "page-content">
+        <script src="js/is-using-mouse.js"></script>
+        <script src="js/basic-button.js"></script>
+        <script src="js/page-header.js"></script>
+        <script src="js/project.js"></script>
+        <script src="js/projects-data.js"></script>
 
-            <div class = "page-block">
-                <div class = "project-header">
-                    <div class = "project-header-logo">
-                        <img class = "project-header-logo-img" src = "assets/game-career/robbery-simulator/logo.png" />
-                    </div>
-                    <div class = "project-header-info">
-                        <div class = "project-header-info-title">Robbery Simulator (by Voldex)</div>
-                        <div class = "project-header-info-subtitle">Gameplay Programmer</div>
-                        <div class = "project-header-info-date">May 2020 - May 2021</div>
-                        <div class = "project-header-info-box black-frame">
-                            <div class = "project-header-info-box-text">Programming • Designing • Leadership</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <script>
+     
+            const pageContent = document.querySelector('.page-content');
 
-            <div class = "page-block">
-                <div class = "project-content black-frame">
-                    <div class = "project-content-media">
-                        <video controls class = "project-content-media-content grey-frame" src = "assets/game-career/robbery-simulator/mission-footage.mp4" />
-                    </div>
-                </div>
-            </div>
+            const pageHeader = newPageHeader([
+            {
+                text: "Back Home",
+                onClick: () => {window.history.back()},
+                hoverHeight: '4px',
+            },
+        ]);
+        document.body.appendChild(pageHeader);
 
-        </div>
+            const projectHeader = makeProjectHeader(projectsData.RobberySimulator);
+            pageContent.appendChild(projectHeader);
+
+            const projectContent = makeProjectContent({
+                src: 'https://www.youtube.com/embed/ly36kn0ug4k',
+                title: 'A Title About Something',
+                desc: 'Lorem ipsum dolor sit amet,consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl.'
+            });
+            pageContent.appendChild(projectContent);
+        </script>
+
+        <script src="https://www.youtube.com/player_api"></script>
     </body>
 </html>

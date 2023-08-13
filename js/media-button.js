@@ -38,19 +38,6 @@
 
 */
 
-// easy code for checking if mobile or not
-var isUsingMouse = false;
-
-// Detect mouse movement
-document.addEventListener('mousemove', () => {
-  isUsingMouse = true;
-});
-
-// Detect touch interactions
-document.addEventListener('touchstart', () => {
-  isUsingMouse = false;
-});
-
 function applyHoverStyles(mediaButton, frame, image, revealClipping) {
     mediaButton.style.zIndex = '100'
     mediaButton.style.cursor = 'pointer';
@@ -97,10 +84,10 @@ function addMediaButtonEventListeners(mediaButton) {
     });
 }
 
-function makeMediaButton(mediaData) {
+function makeMediaButton(projectData) {
     const mediaButton = document.createElement('a');
     mediaButton.classList.add('media-button');
-    mediaButton.href = mediaData.url;
+    mediaButton.href = projectData.url;
     mediaButton.style.textDecoration = 'none';
     mediaButton.style.color = 'inherit';
 
@@ -110,29 +97,29 @@ function makeMediaButton(mediaData) {
 
     const image = document.createElement('img');
     image.classList.add('media-button-thumbnail');
-    image.src = mediaData.imageSrc;
+    image.src = projectData.thumbnailSrc;
 
     const content = document.createElement('div');
     content.classList.add('media-button-content');
 
     const title = document.createElement('p');
     title.classList.add('media-button-title');
-    title.textContent = mediaData.title;
+    title.textContent = projectData.title;
 
     const subTitle = document.createElement('p');
     subTitle.classList.add('media-button-sub-title');
-    subTitle.textContent = mediaData.subTitle;
+    subTitle.textContent = projectData.subTitle;
 
     const revealClipping = document.createElement('div');
     revealClipping.classList.add('media-button-reveal-clipping');
 
     const revealContent = document.createElement('div');
     revealContent.classList.add('media-button-reveal-content');
-    revealContent.textContent = mediaData.content;
+    revealContent.textContent = projectData.content;
 
     const date = document.createElement('p');
     date.classList.add('media-button-date');
-    date.textContent = mediaData.date;
+    date.textContent = projectData.date;
 
     content.appendChild(title);
     content.appendChild(subTitle);

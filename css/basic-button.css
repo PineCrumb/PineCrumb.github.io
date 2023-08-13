@@ -1,0 +1,64 @@
+.basic-button {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+}
+
+.basic-button-frame {
+    background-color: rgb(50, 50, 50);
+
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+
+    position: relative;
+    top: 0px;
+    height: 100%;
+    z-index: -1;
+
+    transition:
+        top 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.basic-button-frame-icon {
+    position: relative;
+
+    margin: 0px 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: calc(100% - 10px);
+}
+
+.basic-button-frame-title {
+    
+    opacity: 0;
+    font-size: 16px;
+    padding: 2px 5px;
+
+    /* prevent text from wrapping */
+    white-space: nowrap;
+
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+
+    z-index: 20;
+
+    transition: opacity 0.2s;
+}
+
+.basic-button-frame-text {
+    padding: 8px 10px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1100px) {
+    .basic-button-frame-text {
+        padding: 8px 10px;
+        font-size: 22px;
+    }
+}

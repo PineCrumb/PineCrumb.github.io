@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #youtube-player {
+      width: 560px; /* Set the player width */
+      height: 315px; /* Set the player height */
+    }
+  </style>
+</head>
+<body>
+  <!-- The div to hold the YouTube player -->
+  <div id="youtube-player1"></div>
+  <div id="youtube-player2"></div>
+
+
+  <!-- Initialize the player -->
+  <script>
+    var player1;
+    var player2;
+    function onYouTubePlayerAPIReady() {
+      player1 = new YT.Player('youtube-player1', {
+        videoId: 'ly36kn0ug4k', // Replace with your YouTube video ID
+        playerVars: {
+            autoplay: 0,        // Autoplay the video
+            controls: 1,        // Hide video controls
+            showinfo: 0,        // Hide video title and uploader info
+            modestbranding: 1,  // Remove YouTube logo
+            rel: 0,             // Don't show related videos at the end
+            fs: 0,              // Disable fullscreen button
+            disablekb: 1,       // Disable keyboard controls
+        }
+      });
+
+      player2 = new YT.Player('youtube-player2', {
+        videoId: 'ly36kn0ug4k', // Replace with your YouTube video ID
+        playerVars: {
+          controls: 1, // Show player controls
+          modestbranding: 0, // Hide YouTube logo in controls
+          showinfo: 0, // Hide video title and uploader info
+        }
+      });
+    }
+  </script>             
+         
+    <video width="560" height="315" controls>
+        <source src="https://i.imgur.com/L9omsd6.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <iframe controls src="https://drive.google.com/file/d/1kCKq29M6ZVYdnr9v_sSo2XUOE1W7bdUj/view"></iframe>
+
+    <iframe src="https://drive.google.com/file/d/1kCKq29M6ZVYdnr9v_sSo2XUOE1W7bdUj/preview" allow="autoplay"></iframe>
+
+    <iframe src="https://player.vimeo.com/video/381890137?h=a5ea2ecaaa" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/381890137">Zelda</a> from <a href="https://vimeo.com/chrisevansforum">Chris Evans Forum</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+    <!-- Load the YouTube Player API -->
+    <script src="https://www.youtube.com/player_api"></script>
+</body>
+</html>
