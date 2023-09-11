@@ -219,7 +219,7 @@
     <script src="js/basic-button.js"></script>
     <script src="js/media-button.js"></script>
     <script src="js/skills.js"></script>
-
+    
     <!-- Page Backdrop -->
     <div class = "page-backdrop"></div>
 
@@ -259,14 +259,25 @@
         </div>
 
         <!-- Demo Real -->
-        <script>
-            const projectContent = makeProjectContent({
-                src: 'https://www.youtube.com/embed/ly36kn0ug4k',
+        <div id = "test"></div>
+
+        <script type = "module">
+
+            import {ProjectContent} from './js/ContentElements/ProjectContent.js';
+            let test = document.getElementById('test');
+
+            const projectContent = new ProjectContent({
                 title: 'Demo Reel',
                 desc: "Although I'm a programmer by trade, I value the entire game development proccess and find passion in developing projects from start to finish. I love working on teams and forming relationships that are not only productive, but also engaging, taking initative when needed and fostering collaboration to develop fantastic experiences for millions of users.",
+                id: 'demoReelHeader',
+                parent: test,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/ly36kn0ug4k',
+                    },
+                ],
             });
-            projectContent.id = 'demoReelHeader';
-            pageContent.appendChild(projectContent);
         </script>
 
         <!-- My Skills -->
@@ -316,34 +327,36 @@
         const gameCareerHeader = document.getElementById('gameCareerHeader');
         const moreProjectsHeader = document.getElementById('moreProjectsHeader');
 
-        const pageHeader = newPageHeader([
-            {
-                text: "About Me",
-                hoverHeight: '4px',
-                onClick: () => {window.scrollTo({top: aboutMeHeader.offsetTop, behavior: 'smooth'});},
-               
-            },
-            {
-                text: "Demo Reel",
-                hoverHeight: '4px',
-                onClick: () => {window.scrollTo({top: demoReelHeader.offsetTop - 30, behavior: 'smooth'});},
-            },
-            {
-                text: "My Skills",
-                hoverHeight: '4px',
-                onClick: () => {window.scrollTo({top: mySkillsHeader.offsetTop - 30, behavior: 'smooth'});},
-            },
-            {
-                text: "My Game Career",
-                hoverHeight: '4px',
-                onClick: () => {window.scrollTo({top: gameCareerHeader.offsetTop - 30, behavior: 'smooth'});},
-            },
-            {
-                text: "More Projects",
-                hoverHeight: '4px',
-                onClick: () => {window.scrollTo({top: moreProjectsHeader.offsetTop - 30, behavior: 'smooth'});},
-            },
-        ]);
+        const pageHeader = newPageHeader({
+            buttonDatas: [
+                {
+                    text: "About Me",
+                    hoverHeight: '4px',
+                    onClick: () => {window.scrollTo({top: aboutMeHeader.offsetTop, behavior: 'smooth'});},
+                
+                },
+                {
+                    text: "Demo Reel",
+                    hoverHeight: '4px',
+                    onClick: () => {window.scrollTo({top: demoReelHeader.offsetTop - 30, behavior: 'smooth'});},
+                },
+                {
+                    text: "My Skills",
+                    hoverHeight: '4px',
+                    onClick: () => {window.scrollTo({top: mySkillsHeader.offsetTop - 30, behavior: 'smooth'});},
+                },
+                {
+                    text: "My Game Career",
+                    hoverHeight: '4px',
+                    onClick: () => {window.scrollTo({top: gameCareerHeader.offsetTop - 30, behavior: 'smooth'});},
+                },
+                {
+                    text: "More Projects",
+                    hoverHeight: '4px',
+                    onClick: () => {window.scrollTo({top: moreProjectsHeader.offsetTop - 30, behavior: 'smooth'});},
+                },
+            ]
+        });
         document.body.appendChild(pageHeader);
 
         // Contact Buttons
@@ -516,8 +529,8 @@
         makeGameCareerButton(projectsData.Tygoonery);
         makeGameCareerButton(projectsData.LandOfMerchants);
         makeGameCareerButton(projectsData.Steelfront);
-        makeGameCareerButton(projectsData.CityEightRoleplay);
         makeGameCareerButton(projectsData.RobberySimulator);
+        makeGameCareerButton(projectsData.CityEightRoleplay);
         makeGameCareerButton(projectsData.TitanGodSimulator);
         makeGameCareerButton(projectsData.KingOfTheKrill);
         makeGameCareerButton(projectsData.SkyOfRobloxia);

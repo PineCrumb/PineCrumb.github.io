@@ -6,7 +6,7 @@ function newPageHeader(pageHeaderData) {
     pageHeaderContent.classList.add('page-header-content');
     pageHeader.appendChild(pageHeaderContent);
 
-    pageHeaderData.forEach(buttonData => {
+    pageHeaderData.buttonDatas.forEach(buttonData => {
         const button = new BasicButton(buttonData);
         pageHeaderContent.appendChild(button.element);
     });

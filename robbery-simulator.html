@@ -21,35 +21,70 @@
 
         <div class = "page-backdrop"></div>
         <div class = "page-content"> </div>
-
+        <script src="js/project.js"></script>
         <script src="js/is-using-mouse.js"></script>
         <script src="js/basic-button.js"></script>
         <script src="js/page-header.js"></script>
-        <script src="js/project.js"></script>
         <script src="js/projects-data.js"></script>
 
-        <script>
-     
-            const pageContent = document.querySelector('.page-content');
+        <script type="module">
+    
+            import {ProjectContent} from './js/ContentElements/ProjectContent.js';
 
-            const pageHeader = newPageHeader([
-                {
-                    text: "Back Home",
-                    onClick: goBackHome,
-                    hoverHeight: '4px',
-                },
-            ]);
+            const pageContent = document.querySelector('.page-content');
+            const pageHeader = newPageHeader({
+                buttonDatas: [
+                    {
+                        text: "Back Home",
+                        onClick: goBackHome,
+                        hoverHeight: '4px',
+                    },
+                ]
+            });
             document.body.appendChild(pageHeader);
 
             const projectHeader = makeProjectHeader(projectsData.RobberySimulator);
             pageContent.appendChild(projectHeader);
 
-            const projectContent = makeProjectContent({
-                src: 'https://www.youtube.com/embed/ly36kn0ug4k',
+            new ProjectContent({
                 title: 'A Title About Something',
-                desc: 'Lorem ipsum dolor sit amet,consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl.'
+                desc: 'Lorem ipsum dolor sit amet,consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl.',
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                    },
+                    {
+                        className: 'ImageViewer',
+                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                    },
+                ],
             });
-            pageContent.appendChild(projectContent);
+
+            new ProjectContent({
+                title: 'A Title About Something AGAIN',
+                desc: 'Lorem ipsum dolor sit amet,consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl.',
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                    },
+                ],
+            });
+
+            new ProjectContent({
+                title: 'A Title About Something AGAIN 2',
+                desc: 'Lorem ipsum dolor sit amet,coolnc, eget aliquam nisl nisl eget nisl. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl.',
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                    },
+                ],
+            });
         </script>
 
         <script src="https://www.youtube.com/player_api"></script>

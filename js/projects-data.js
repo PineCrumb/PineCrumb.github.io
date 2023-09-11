@@ -33,8 +33,8 @@ const projectsData = {
     },
 
     CityEightRoleplay : {
-        title: "City-8 Roleplay",
-        subTitle: "Gameplay Programmer (Commissioned)",
+        title: "City 8 Roleplay (by Half-Life World)",
+        subTitle: "Programmer [Commissioned]",
         date: "Februrary 2021 - April 2021",
         content: "sdlf  sdd s s dfsdf fsds fdsdf sdf sdf sdf sdf sdf sdfsd fsdf  sfds dfsdf sdf sdf sdf  sdf sd fjsld j",
         thumbnailSrc: "assets/game-career/robbery-simulator/thumbnail.png",
