@@ -23,7 +23,7 @@ class ImageFrame {
 
         frame.addEventListener('click', () => {
             this.hide();
-        });
+        }, true);
 
         // style: center screen, made to fit screen. has a margin of 10px.
         let image = document.createElement('img');
@@ -115,6 +115,6 @@ export class ImageViewer extends ContentElementBase {
         this.element.addEventListener('click', () => {
             console.log('click');
             imageFrame.show(contentData.src);
-        });
+        }, true);
     }
 }
