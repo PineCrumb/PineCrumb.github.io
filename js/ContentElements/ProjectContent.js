@@ -36,6 +36,12 @@ export class ProjectContent extends ContentElementBase {
         divPageBlock.appendChild(projectContentDiv);
     
         this.projectContentMediaDiv = projectContentMediaDiv;
+  
+        // debug
+        // setInterval(() => {
+        //     projectContentInfoTitleDiv.innerText = projectContentMediaDiv.clientHeight;
+        // }, 10);
+        
         return divPageBlock;
     }
 
