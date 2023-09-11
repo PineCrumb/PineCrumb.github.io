@@ -57,7 +57,7 @@ class ImageFrame {
 
         exitButton.addEventListener('click', () => {
             this.hide();
-        });
+        }, true);
 
         frame.appendChild(image);
         frame.appendChild(exitButton);
