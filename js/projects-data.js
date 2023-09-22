@@ -16,9 +16,9 @@ const projectsData = {
         date: "April 2021 - Feb 2022",
         content: "sdlf  sdd s s dfsdf fsds fdsdf sdf sdf sdf sdf sdf sdfsd fsdf  sfds dfsdf sdf sdf sdf  sdf sd fjsld j",
         thumbnailSrc: "assets/LomThumbnail.png",
-        headerLogoSrc: "assets/game-career/robbery-simulator/logo.png",
+        headerLogoSrc: "assets/game-career/land-of-merchants/logo.png",
         headerText: ["Programming", "Designing", "Leadership"],
-        url: "robbery-simulator.html",
+        url: "land-of-merchants.html",
     },
     
     Steelfront : {

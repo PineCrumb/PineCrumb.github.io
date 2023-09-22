@@ -27,7 +27,7 @@ export class ProjectContent extends ContentElementBase {
     
         const projectContentInfoDescDiv = document.createElement('div');
         projectContentInfoDescDiv.classList.add('project-content-info-desc');
-        projectContentInfoDescDiv.innerText = contentData.desc;
+        projectContentInfoDescDiv.innerHTML = contentData.desc;
 
         projectContentDiv.appendChild(projectContentMediaDiv);
         projectContentInfoDiv.appendChild(projectContentInfoTitleDiv);

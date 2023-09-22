@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta -->
+        <title>PineCrumb - Robbery Simulator</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/general.css" />
+        <link rel="stylesheet" href="css/page-header.css" />
+        <link rel="stylesheet" href="css/basic-button.css" />
+        <link rel="stylesheet" href="css/project.css" />
+    </head>
+
+    <body>
+
+        <div class = "page-backdrop"></div>
+        <div class = "page-content"></div>
+
+        <script src="js/project.js"></script>
+        <script src="js/is-using-mouse.js"></script>
+        <script src="js/basic-button.js"></script>
+        <script src="js/page-header.js"></script>
+        <script src="js/projects-data.js"></script>
+
+        <script type="module">
+    
+            import {ProjectContent} from './js/ContentElements/ProjectContent.js';
+
+            const pageContent = document.querySelector('.page-content');
+            const pageHeader = newPageHeader({
+                buttonDatas: [
+                    {
+                        text: "Back Home",
+                        onClick: goBackHome,
+                        hoverHeight: '4px',
+                    },
+                ]
+            });
+            document.body.appendChild(pageHeader);
+
+            const projectHeader = makeProjectHeader(projectsData.LandOfMerchants);
+            pageContent.appendChild(projectHeader);
+
+            new ProjectContent({
+                title: 'Overview',
+                desc:
+
+`
+Land of Merchants is the IP I lead during my time at Supersocial for the Supersocial Labs program. In the game,
+players explore a fantasy world as a shopkeeper, discovering and gathering resources from far and wide to craft items worthy of selling to the greatest adventurers of the land.
+<br>
+<u>As the lead developer, my responsibilites included:</u>
+<ul>
+<li>Designing and programing gameplay</li>
+<li>Creating an immersive open world</li>
+<li>Mananging contractors and deadlines</li>
+<li>Cultivating a community of 2k+ discord members pre-release</li>
+</ul>
+
+Although the project was unfortunately shelved due to layoffs, the experiences I learned from my time with Land of Merchants at Supersocial were invaluable.
+`,
+
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                    },
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/ZhpDwaps6qY',
+                    },                    
+                    // {
+                    //     className: 'ImageViewer',
+                    //     src: 'assets/about-me/me-icon.svg',
+                    //     style: {
+                    //         width: '100%',
+                    //         height: '100px',
+                    //     },
+                    // },
+                ],
+            });
+
+
+            new ProjectContent({
+                title: 'Engineering Customers: A World of Pathfinding',
+                desc:
+
+`
+To create a massive open world for customers, I developed <u>Baked Pathing Nodes Plugin</u>: a system where nodes were placed in the world, and
+paths from connected nodes were pre-baked into the world for customers to follow. This allows for thousands of customers to travel a massive open world at a low cost.
+<br>
+To create paths for customers to follow, I then made a nifty plugin that allows me to select node paths and connect them, producing data on paths for customers to walk along.
+These tools together allowed for customers to travel the world.
+<br>
+Customers are loaded into <u>customly configured chunks</u>.
+<br>
+Once customers would enter the player’s shop, their pathfinding would revert to <u>Grid A* Pathfinding</u>, respecting the ground and the furniture players freely placed.
+`,
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/oeRiGrM1Cuo',
+                    },
+                ],
+            });
+
+            new ProjectContent({
+                title: 'Engineering Customers: Behavior',
+                desc:
+
+`
+To create a massive open world for customers, I developed <u>Baked Pathing Nodes Plugin</u>: a system where nodes were placed in the world, and
+paths from connected nodes were pre-baked into the world for customers to follow. This allows for thousands of customers to travel a massive open world at a low cost.
+<br>
+To create paths for customers to follow, I then made a nifty plugin that allows me to select node paths and connect them, producing data on paths for customers to walk along.
+These tools together allowed for customers to travel the world.
+<br>
+Customers are loaded into <u>customly configured chunks</u>.
+<br>
+Once customers would enter the player’s shop, their pathfinding would revert to <u>Grid A* Pathfinding</u>, respecting the ground and the furniture players freely placed.
+`,
+                parent: pageContent,
+                contentDatas: [
+
+                ],
+            });
+
+            new ProjectContent({
+                title: 'Engineering Immersive Crafting + UX',
+                desc:
+
+`
+To create a massive open world for customers, I developed <u>Baked Pathing Nodes Plugin</u>: a system where nodes were placed in the world, and
+paths from connected nodes were pre-baked into the world for customers to follow. This allows for thousands of customers to travel a massive open world at a low cost.
+<br>
+To create paths for customers to follow, I then made a nifty plugin that allows me to select node paths and connect them, producing data on paths for customers to walk along.
+These tools together allowed for customers to travel the world.
+<br>
+Customers are loaded into <u>customly configured chunks</u>.
+<br>
+Once customers would enter the player’s shop, their pathfinding would revert to <u>Grid A* Pathfinding</u>, respecting the ground and the furniture players freely placed.
+`,
+                parent: pageContent,
+                contentDatas: [
+                {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/XYEo5T0mtxI',
+                    },
+                ],
+            });
+
+            new ProjectContent({
+                title: 'Being a Manager and Leader',
+                desc:
+
+`
+<ul>
+<li>frequently communicated with employers to secure deadlines.</li>
+<li>Managed a team of contractors: setup meetings, directed them, and often designed instruction documents for them.</li>
+</ul>
+`,
+                parent: pageContent,
+                contentDatas: [
+
+                ],
+            });
+
+        </script>
+
+        <script src="https://www.youtube.com/player_api"></script>
+    </body>
+</html>

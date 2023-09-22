@@ -35,7 +35,7 @@ class ImageFrame {
         image.style.maxHeight = 'calc(100% - 40px)';
         image.style.objectFit = 'contain';
         image.style.objectPosition = 'center';
-        image.style.cursor = 'pointer';
+        // image.style.cursor = 'pointer';
         image.style.opacity = '0';
         image.style.transition = `opacity ${EASING_TIME}s ease`;
         
@@ -93,6 +93,7 @@ export class ImageViewer extends ContentElementBase {
     makeContentElement(contentData) {
         const img = document.createElement('img');
         img.src = contentData.src;
+        img.style.cursor = 'pointer';
         
         // loop through style props and set them
         contentData.style = contentData.style || {};

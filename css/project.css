@@ -1,3 +1,11 @@
+li {
+    margin-bottom: 8px;
+}
+
+br {
+    margin-bottom: 12px;
+}
+
 /* Project Header */
 .project-header {
     /* background-color: yellow; */
@@ -118,21 +126,20 @@
 .project-content-info {
     /* background-color: orange; */
 
-    display: grid;
-    grid-template-rows: 40px 1fr;
-    margin: 30px 30px 50px 20px;
+    margin: 30px 20px 30px 10px;
 }
 
 .project-content-info-title {
     /* background-color: red; */
     font-size: 26px;
     font-weight: 900;
+    margin-bottom: 10px;
 }
 
 .project-content-info-desc {
     /* background-color: green; */
     color: rgb(200, 200, 200);
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 4px;
     margin-left: 4px;
 }
