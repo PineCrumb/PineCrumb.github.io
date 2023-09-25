@@ -1,10 +1,12 @@
 import { ContentElementBase } from './ContentElementBase.js';
 import { YoutubeVideo } from './YoutubeVideo.js';
 import {ImageViewer} from './ImageViewer.js';
+import {LinkViewer} from './LinkViewer.js';
 
 let exposedContentElementClasses = {
     'YoutubeVideo': YoutubeVideo,
-    'ImageViewer': ImageViewer
+    'ImageViewer': ImageViewer,
+    'LinkViewer': LinkViewer,
 };
 
 export class ProjectContent extends ContentElementBase {

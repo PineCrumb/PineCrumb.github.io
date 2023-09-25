@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta -->
+        <title>PineCrumb - SteelFront</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/general.css" />
+        <link rel="stylesheet" href="css/page-header.css" />
+        <link rel="stylesheet" href="css/basic-button.css" />
+        <link rel="stylesheet" href="css/project.css" />
+    </head>
+
+    <body>
+
+        <div class = "page-backdrop"></div>
+        <div class = "page-content"></div>
+
+        <script src="js/project.js"></script>
+        <script src="js/is-using-mouse.js"></script>
+        <script src="js/basic-button.js"></script>
+        <script src="js/page-header.js"></script>
+        <script src="js/projects-data.js"></script>
+
+        <script type="module">
+    
+            import {ProjectContent} from './js/ContentElements/ProjectContent.js';
+
+            const pageContent = document.querySelector('.page-content');
+            const pageHeader = newPageHeader({
+                buttonDatas: [
+                    {
+                        text: "Back Home",
+                        onClick: goBackHome,
+                        hoverHeight: '4px',
+                    },
+                ]
+            });
+            document.body.appendChild(pageHeader);
+
+            const projectHeader = makeProjectHeader(projectsData.Steelfront);
+            pageContent.appendChild(projectHeader);
+
+            new ProjectContent({
+                title: 'Overview',
+                desc:
+
+`
+Land of Merchants is the IP I lead during my time at Supersocial for the Supersocial Labs program. In the game,
+players explore a fantasy world as a shopkeeper, discovering and gathering resources from far and wide to craft items worthy of selling to the greatest adventurers of the land.
+<br>
+<u>As the lead developer, my responsibilites included:</u>
+<ul>
+<li>Designing and programing gameplay</li>
+<li>Creating an immersive open world</li>
+<li>Mananging contractors and deadlines</li>
+<li>Cultivating a community of 2k+ discord members pre-release</li>
+</ul>
+
+Although the project was unfortunately shelved due to layoffs, the experiences I learned from my time with Land of Merchants at Supersocial were invaluable.
+`,
+
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                    },
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/ZhpDwaps6qY',
+                    },                    
+                    // {
+                    //     className: 'ImageViewer',
+                    //     src: 'assets/about-me/me-icon.svg',
+                    //     style: {
+                    //         width: '100%',
+                    //         height: '100px',
+                    //     },
+                    // },
+                ],
+            });
+        </script>
+
+        <script src="https://www.youtube.com/player_api"></script>
+    </body>
+</html>
