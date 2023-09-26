@@ -2,20 +2,21 @@ import { ContentElementBase } from './ContentElementBase.js';
 
 export class LinkViewer extends ContentElementBase {
     makeContentElement(contentData) {
+        const link = document.createElement('a');
+        link.style.cursor = 'pointer';
+        link.style.width = '90%';
+        link.style.objectFit = 'cover';
+        link.style.margin = '30px 0px';
+        link.href = contentData.pdfSrc;
+        link.target = '_blank';
+
         const frame = document.createElement('img');
         frame.classList.add('grey-frame');
-        frame.style.cursor = 'pointer';
-        // frame.style.width = '90%';
-        // frame.style.height = '50%';
-        frame.style.width = '90%';
-        frame.style.objectFit = 'cover';
-        frame.style.margin = '30px 0px';
         frame.src = contentData.imgSrc;
+        frame.style.width = '100%';
 
-        frame.addEventListener('click', () => {
-            window.open(contentData.pdfSrc, '_blank');
-        });
+        link.appendChild(frame);
 
-        return frame;
+        return link;
     }
 }

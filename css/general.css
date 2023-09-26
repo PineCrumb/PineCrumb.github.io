@@ -32,6 +32,12 @@ a {
     color: white;
 }
 
+.text-link {
+    cursor: pointer;
+    color: rgb(0, 174, 255);
+    text-decoration: underline;
+}
+
 /* Misc */
 .select-disable {
     pointer-events: none;
