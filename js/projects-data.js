@@ -29,7 +29,7 @@ const projectsData = {
         thumbnailSrc: "assets/game-career/steelfront/thumbnail.png",
         headerLogoSrc: "assets/game-career/steelfront/logo.png",
         headerText: ["Programming", "Designing", "Leadership"],
-        url: "robbery-simulator.html",
+        url: "steelfront.html",
     },
 
     CityEightRoleplay : {
