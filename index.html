@@ -310,8 +310,8 @@
         </div>
 
         <div class = "page-block">
-            <div class = "skills-container black-frame">
-                <div class="grid-test" id> </div>
+            <div class = "game-career-container black-frame" id = "moreProjectsContainer">
+                
             </div>
         </div>
     </div>
@@ -518,6 +518,10 @@
             },
         ]
 
+        
+        const gameCareerContainer = document.getElementById('gameCareerContainer');
+        const moreProjectsContainer = document.getElementById('moreProjectsContainer');
+
         skillsDatas.forEach(skillsData => {
             const skillsFrame = makeSkillsFrame(skillsData);
             const skillButtonsContainer = skillsFrame.querySelector('#skillButtonsContainer');
@@ -535,15 +539,22 @@
             gameCareerContainer.appendChild(mediaButton);
         }
 
+        function makeMoreProjectsButton(projectData) {
+            const mediaButton = makeMediaButton(projectData);
+            moreProjectsContainer.appendChild(mediaButton);
+        }
+
         //makeGameCareerButton(projectsData.Tygoonery);
-        makeGameCareerButton(projectsData.LandOfMerchants);
         makeGameCareerButton(projectsData.Steelfront);
+        makeGameCareerButton(projectsData.LandOfMerchants);
         makeGameCareerButton(projectsData.RobberySimulator);
-        makeGameCareerButton(projectsData.CityEightRoleplay);
+        makeGameCareerButton(projectsData.HalfLife);
         makeGameCareerButton(projectsData.TitanGodSimulator);
-        //makeGameCareerButton(projectsData.KingOfTheKrill);
+        makeGameCareerButton(projectsData.KingOfTheKrill);
         //makeGameCareerButton(projectsData.SkyOfRobloxia);
 
+        makeMoreProjectsButton(projectsData.TycoonPlugin);
+        makeMoreProjectsButton(projectsData.TycoonPlugin);
     </script>
 
 </body>

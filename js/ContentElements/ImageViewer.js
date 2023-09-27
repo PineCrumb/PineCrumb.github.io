@@ -38,7 +38,8 @@ class ImageFrame {
         // image.style.cursor = 'pointer';
         image.style.opacity = '0';
         image.style.transition = `opacity ${EASING_TIME}s ease`;
-        
+        image.style.overflow = 'hidden';
+
         let exitButton = document.createElement('div');
         exitButton.textContent = 'X';
         exitButton.style.position = 'absolute';
@@ -92,7 +93,8 @@ const imageFrame = new ImageFrame();
 export class ImageViewer extends ContentElementBase {
     makeContentElement(contentData) {
         const img = document.createElement('img');
-        img.src = contentData.src;
+        img.classList.add('project-content-media-content', 'grey-frame');
+        img.src = contentData.thumbnailSrc || contentData.imageSrc;
         img.style.cursor = 'pointer';
         
         // loop through style props and set them
@@ -115,7 +117,7 @@ export class ImageViewer extends ContentElementBase {
 
         this.element.addEventListener('click', () => {
             console.log('click');
-            imageFrame.show(contentData.src);
+            imageFrame.show(contentData.imageSrc);
         }, true);
     }
 }

@@ -24,8 +24,11 @@ function makeProjectHeader(projectData) {
     const imgLogo = document.createElement("img");
     imgLogo.className = "project-header-logo-img";
     imgLogo.src = projectData.headerLogoSrc;
-    imgLogo.style.height = "100%";
     divProjectHeaderLogo.appendChild(imgLogo);
+
+    for (const [key, value] of Object.entries(projectData.headerLogoStyle)) {
+        imgLogo.style[key] = value;
+    }
 
     const divProjectHeaderInfo = document.createElement("div");
     divProjectHeaderInfo.className = "project-header-info";

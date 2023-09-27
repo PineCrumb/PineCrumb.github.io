@@ -1,10 +1,12 @@
 import { ContentElementBase } from './ContentElementBase.js';
 import { YoutubeVideo } from './YoutubeVideo.js';
+import {LocalVideo} from './LocalVideo.js';
 import {ImageViewer} from './ImageViewer.js';
 import {LinkViewer} from './LinkViewer.js';
 
 let exposedContentElementClasses = {
     'YoutubeVideo': YoutubeVideo,
+    'LocalVideo': LocalVideo,
     'ImageViewer': ImageViewer,
     'LinkViewer': LinkViewer,
 };

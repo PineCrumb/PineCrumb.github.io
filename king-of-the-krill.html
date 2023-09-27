@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta -->
+        <title>PineCrumb - King Of The Krill</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/general.css" />
+        <link rel="stylesheet" href="css/page-header.css" />
+        <link rel="stylesheet" href="css/basic-button.css" />
+        <link rel="stylesheet" href="css/project.css" />
+    </head>
+
+    <body>
+        <div class = "page-backdrop"></div>
+        <div class = "page-content"> </div>
+        <script src="js/project.js"></script>
+        <script src="js/is-using-mouse.js"></script>
+        <script src="js/basic-button.js"></script>
+        <script src="js/page-header.js"></script>
+        <script src="js/projects-data.js"></script>
+
+        <script type="module">
+    
+            import {ProjectContent} from './js/ContentElements/ProjectContent.js';
+
+            const pageContent = document.querySelector('.page-content');
+            const pageHeader = newPageHeader({
+                buttonDatas: [
+                    {
+                        text: "Back Home",
+                        onClick: goBackHome,
+                        hoverHeight: '4px',
+                    },
+                ]
+            });
+            document.body.appendChild(pageHeader);
+
+            const projectHeader = makeProjectHeader(projectsData.KingOfTheKrill);
+            pageContent.appendChild(projectHeader);
+
+            new ProjectContent({
+                title: 'A Title About Something',
+                desc:
+`
+Lorem ipsum dolor sit amet,consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl. Donec euismod,
+nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl.
+`,
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                    },
+                ],
+            });
+
+            new ProjectContent({
+                title: 'A Title About Something AGAIN',
+                desc: 'Lorem ipsum dolor sit amet,consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl.',
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                    },
+                ],
+            });
+
+            new ProjectContent({
+                title: 'A Title About Something AGAIN 2',
+                desc: 'Lorem ipsum dolor sit amet,coolnc, eget aliquam nisl nisl eget nisl. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl.',
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                    },
+                ],
+            });
+        </script>
+
+        <script src="https://www.youtube.com/player_api"></script>
+    </body>
+</html>
