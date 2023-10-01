@@ -55,7 +55,7 @@
             pageContent.appendChild(projectHeader);
 
             new ProjectContent({
-                title: 'A Title About Something',
+                title: 'Game Overview',
                 desc:
 `
 Lorem ipsum dolor sit amet,consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -66,34 +66,71 @@ nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget
                 contentDatas: [
                     {
                         className: 'YoutubeVideo',
-                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                        src: 'https://www.youtube.com/embed/f33-9GYpt2I',
+                    },
+                ],
+            });
+
+
+
+            new ProjectContent({
+                title: 'Enemies - Headcrabs',
+                desc:
+`
+I worked on the 2.0 update for Robbery Simulator, a simulator game by Voldex where players steal items from shops and sell them to continually progress.
+In this update, I was in charge of missions, which included:
+
+<ul>
+<li>Creating a missions system</li>
+<li>Designing fun missions and implementing them</li>
+<li>Working with game artists to turn blockouts into mission environments</li>
+</ul>
+
+I was also in charge of redesigning much of the game’s hud, adding additional elements to support missions and making other elements easier to navigate.
+`,
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'LocalVideo',
+                        thumbnailSrc: 'assets/game-career/robbery-simulator/thumbnail-blockout.png',
+                        videoSrc: 'assets/game-career/half-life/headcrabs-optimized.mp4',
+                    },
+                    {
+                        className: 'ImageViewer',
+                        imageSrc: 'assets/game-career/half-life/headcrabs-models.JPG',
+                        style: {
+                            width: '250px',
+                            height: '250px',
+                        },
                     },
                 ],
             });
 
             new ProjectContent({
-                title: 'A Title About Something AGAIN',
-                desc: 'Lorem ipsum dolor sit amet,consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec e Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl.',
+                title: 'Vehicles - APCs',
+                desc:
+`
+I worked on the 2.0 update for Robbery Simulator, a simulator game by Voldex where players steal items from shops and sell them to continually progress.
+In this update, I was in charge of missions, which included:
+
+<ul>
+<li>Creating a missions system</li>
+<li>Designing fun missions and implementing them</li>
+<li>Working with game artists to turn blockouts into mission environments</li>
+</ul>
+
+I was also in charge of redesigning much of the game’s hud, adding additional elements to support missions and making other elements easier to navigate.
+`,
                 parent: pageContent,
                 contentDatas: [
                     {
-                        className: 'YoutubeVideo',
-                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
+                        className: 'LocalVideo',
+                        thumbnailSrc: 'assets/game-career/robbery-simulator/thumbnail-blockout.png',
+                        videoSrc: 'assets/game-career/half-life/apc-optimized.mp4',
                     },
                 ],
             });
 
-            new ProjectContent({
-                title: 'A Title About Something AGAIN 2',
-                desc: 'Lorem ipsum dolor sit amet,coolnc, eget aliquam nisl nisl eget nisl. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nisl eget nisl.',
-                parent: pageContent,
-                contentDatas: [
-                    {
-                        className: 'YoutubeVideo',
-                        src: 'https://www.youtube.com/embed/4GXSe2ltEGM',
-                    },
-                ],
-            });
         </script>
 
         <script src="https://www.youtube.com/player_api"></script>

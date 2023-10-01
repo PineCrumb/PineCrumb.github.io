@@ -47,8 +47,8 @@ const projectsData = {
 
     HalfLife : {
         title: "City 8 Roleplay (by Half-Life World)",
-        subTitle: "Programmer [Commissioned]",
-        date: "Februrary 2021 - April 2021",
+        subTitle: "Gameplay Programmer",
+        date: "January 2021 - April 2021",
         content: "sdlf  sdd s s dfsdf fsds fdsdf sdf sdf sdf sdf sdf sdfsd fsdf  sfds dfsdf sdf sdf sdf  sdf sd fjsld j",
         thumbnailSrc: "assets/game-career/half-life/thumbnail.png",
         headerLogoSrc: "assets/game-career/half-life/logo.png",
