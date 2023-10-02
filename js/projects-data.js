@@ -49,7 +49,7 @@ const projectsData = {
         title: "City 8 Roleplay (by Half-Life World)",
         subTitle: "Gameplay Programmer",
         date: "January 2021 - April 2021",
-        content: "RRoleplay in the surviving remains of Tokyo under the combine rule as an enforcer or a rebel, working with your team to immerse yourself in fighting the opposition.",
+        content: "Roleplay in the surviving remains of Tokyo under the combine rule as an enforcer or a rebel, working with your team to immerse yourself in fighting the opposition.",
         thumbnailSrc: "assets/game-career/half-life/thumbnail.png",
         headerLogoSrc: "assets/game-career/half-life/logo.png",
         headerLogoStyle: {
@@ -92,7 +92,7 @@ const projectsData = {
         title: "King Of The Krill",
         subTitle: "Creator and Developer",
         date: "September 2019 - June 2020",
-        content: "sdlf  sdd s s dfsdf fsds fdsdf sdf sdf sdf sdf sdf sdfsd fsdf  sfds dfsdf sdf sdf sdf  sdf sd fjsld j",
+        content: "Collect fish, level up, and eat your way to becoming the biggest fish in the sea in King of the Krill.",
         thumbnailSrc: "assets/game-career/king-of-the-krill/thumbnail.png",
         headerLogoSrc: "assets/game-career/king-of-the-krill/logo.png",
         headerLogoStyle: {

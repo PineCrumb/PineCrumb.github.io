@@ -72,22 +72,36 @@ been thrilled to see other Half Life fans enjoy my work on the game since then.
                 ],
             });
 
-
+            new ProjectContent({
+                title: 'Vehicles - APCs',
+                desc:
+`
+Given an existing chassis,
+I set out to make APCs in Half-Life as cool as possible. I designed and implemented a vehicle that accommodates one
+player as the driver while providing seats for others in the back. I also used original sounds from Half-Life 2 and made the turret
+work lore accurately, as well as causing it to overheat when fired too often.
+<span class = "new-line"></span>
+Seeing players organize fleets of APCs has made this vehicle one of my favorite creations for the Roblox roleplaying community.
+`,
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'LocalVideo',
+                        thumbnailSrc: 'assets/game-career/half-life/apcs-thumbnail.png',
+                        videoSrc: 'assets/game-career/half-life/apc-optimized.mp4',
+                    },
+                ],
+            });
 
             new ProjectContent({
                 title: 'Enemies - Headcrabs',
                 desc:
 `
-I worked on the 2.0 update for Robbery Simulator, a simulator game by Voldex where players steal items from shops and sell them to continually progress.
-In this update, I was in charge of missions, which included:
-
-<ul>
-<li>Creating a missions system</li>
-<li>Designing fun missions and implementing them</li>
-<li>Working with game artists to turn blockouts into mission environments</li>
-</ul>
-
-I was also in charge of redesigning much of the game’s hud, adding additional elements to support missions and making other elements easier to navigate.
+Having full creative freedom over the headcrab, I made a state based AI that remains idle until it detects a player,
+at which point it starts chasing and leaping towards them, attempting to attach itself to their head. Once successfully attached,
+the player transforms into a headcrab zombie and is no longer targeted by other headcrabs.
+<span class = "new-line"></span>
+Along with programming them, I also had the opportunity to flex my 3D creative skills with fully modeling and texturing the headcrab.
 `,
                 parent: pageContent,
                 contentDatas: [
@@ -103,31 +117,6 @@ I was also in charge of redesigning much of the game’s hud, adding additional 
                             width: '250px',
                             height: '250px',
                         },
-                    },
-                ],
-            });
-
-            new ProjectContent({
-                title: 'Vehicles - APCs',
-                desc:
-`
-I worked on the 2.0 update for Robbery Simulator, a simulator game by Voldex where players steal items from shops and sell them to continually progress.
-In this update, I was in charge of missions, which included:
-
-<ul>
-<li>Creating a missions system</li>
-<li>Designing fun missions and implementing them</li>
-<li>Working with game artists to turn blockouts into mission environments</li>
-</ul>
-
-I was also in charge of redesigning much of the game’s hud, adding additional elements to support missions and making other elements easier to navigate.
-`,
-                parent: pageContent,
-                contentDatas: [
-                    {
-                        className: 'LocalVideo',
-                        thumbnailSrc: 'assets/game-career/half-life/apcs-thumbnail.png',
-                        videoSrc: 'assets/game-career/half-life/apc-optimized.mp4',
                     },
                 ],
             });
