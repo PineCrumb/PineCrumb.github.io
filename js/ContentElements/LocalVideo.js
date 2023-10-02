@@ -8,6 +8,7 @@ export class LocalVideo extends ContentElementBase {
         container.style.position = 'relative';
         container.style.width = '390px';
         container.style.height = '220px';
+        container.style.margin = '30px auto';
 
         const thumbnailImg = document.createElement('img');
         thumbnailImg.src = contentData.thumbnailSrc;
@@ -30,22 +31,38 @@ export class LocalVideo extends ContentElementBase {
         playButton.style.zIndex = '1';
         container.appendChild(playButton);
 
-        const iframe = document.createElement('iframe');
-        iframe.src = contentData.videoSrc;
-        iframe.frameBorder = '0';
-        iframe.allowFullscreen = true;
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
-        container.style.overflow = 'hidden';
-        iframe.style.display = 'none';
+        const videoFrame = document.createElement('video');
+        videoFrame.controls = true;
+        videoFrame.style.width = '100%';
+        videoFrame.style.height = '100%';
+        videoFrame.style.overflow = 'hidden';
+        videoFrame.style.display = 'none';
+
+        const source = document.createElement('source');
+        source.src = contentData.videoSrc;
+        source.type = 'video/mp4';
+        videoFrame.appendChild(source);
+
+
+        // const videoFrame = document.createElement('iframe');
+        // videoFrame.src = contentData.videoSrc;
+        // videoFrame.frameBorder = '0';
+        // videoFrame.allowFullscreen = true;
+        // videoFrame.style.width = '100%';
+        // videoFrame.style.height = '100%';
+        // videoFrame.style.overflow = 'hidden';
+        // videoFrame.style.display = 'none';
+        // videoFrame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    
 
         thumbnailImg.addEventListener('click', function() {
-            iframe.style.display = 'block';
+            videoFrame.style.display = 'block';
             thumbnailImg.style.display = 'none';
             playButton.style.display = 'none';
+            videoFrame.play();
         });
 
-        container.appendChild(iframe);
+        container.appendChild(videoFrame);
 
         return container;
     }

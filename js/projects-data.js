@@ -20,7 +20,7 @@ const projectsData = {
         title: 'SteelFront (War Game)',
         subTitle: "Co-Creator and Developer",
         date: "December 2022 - March 2023",
-        content: "sdlf  sdd s s dfsdf fsds fdsdf sdf sdf sdf sdf sdf sdfsd fsdf  sfds dfsdf sdf sdf sdf  sdf sd fjsld j",
+        content: "Fight against the enemy in a dynamic world designed to be repeatedly destroyed and rebuilt during rounds lasting hours.",
         thumbnailSrc: "assets/game-career/steelfront/thumbnail.png",
         headerLogoSrc: "assets/game-career/steelfront/logo.png",
         headerLogoStyle: {
@@ -49,7 +49,7 @@ const projectsData = {
         title: "City 8 Roleplay (by Half-Life World)",
         subTitle: "Gameplay Programmer",
         date: "January 2021 - April 2021",
-        content: "sdlf  sdd s s dfsdf fsds fdsdf sdf sdf sdf sdf sdf sdfsd fsdf  sfds dfsdf sdf sdf sdf  sdf sd fjsld j",
+        content: "RRoleplay in the surviving remains of Tokyo under the combine rule as an enforcer or a rebel, working with your team to immerse yourself in fighting the opposition.",
         thumbnailSrc: "assets/game-career/half-life/thumbnail.png",
         headerLogoSrc: "assets/game-career/half-life/logo.png",
         headerLogoStyle: {
@@ -63,7 +63,7 @@ const projectsData = {
         title: "Robbery Simulator (by Voldex)",
         subTitle: "Lead Programmer",
         date: "May 2020 - May 2021",
-        content: "sdlf  sdd s s dfsdf fsds fdsdf sdf sdf sdf sdf sdf sdfsd fsdf  sfds dfsdf sdf sdf sdf  sdf sd fjsld j",
+        content: "Rob precious loot, avoid guards, and complete missions while upgrading your items to become the richest thief in Robbery Simulator.",
         thumbnailSrc: "assets/game-career/robbery-simulator/thumbnail.png",
         headerLogoSrc: "assets/game-career/robbery-simulator/logo.png",
         headerLogoStyle: {
@@ -77,7 +77,7 @@ const projectsData = {
         title: "Titan God Simulator (by Modblox)",
         subTitle: "Fullstack Programmer",
         date: "July 2019 - April 2020",
-        content: "sdlf  sdd s s dfsdf fsds fdsdf sdf sdf sdf sdf sdf sdfsd fsdf  sfds dfsdf sdf sdf sdf  sdf sd fjsld j",
+        content: "Start as a mortal and grow into the largest titan, jumping to grow and collecting pets to increase multipliers along the way.",
         thumbnailSrc: "assets/game-career/titan-god-simulator/thumbnail.png",
         headerLogoSrc: "assets/game-career/titan-god-simulator/logo.png",
         headerLogoStyle: {
