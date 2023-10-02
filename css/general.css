@@ -92,19 +92,13 @@ body, html {
 
 .page-content {
     width: 950px;
-    height: 100%;
-    /* background-color: red; */
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    margin: 50px auto 40px auto;
     
     display: flex;
-    justify-content: top;
+    justify-content: center; /* Center horizontally */
     align-items: center;
     flex-direction: column;
 }
-
 .page-backdrop {
     background-color: rgb(35, 35, 35);
     position: fixed;

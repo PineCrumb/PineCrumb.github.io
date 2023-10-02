@@ -93,7 +93,11 @@ const imageFrame = new ImageFrame();
 export class ImageViewer extends ContentElementBase {
     makeContentElement(contentData) {
         const img = document.createElement('img');
-        img.classList.add('project-content-media-content', 'grey-frame');
+
+        if (contentData.ignoreGrey !== true) {
+            img.classList.add('project-content-media-content', 'grey-frame');
+        }
+
         img.src = contentData.thumbnailSrc || contentData.imageSrc;
         img.style.cursor = 'pointer';
         
