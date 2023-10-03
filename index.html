@@ -295,7 +295,7 @@
         <!-- My Game Career -->
         <div class = "page-block-header-container" id = "gameCareerHeader">
             <div class = "page-block-header-text-header">Game Career Showcase</div>
-            <div class = "page-block-header-text-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            <div class = "page-block-header-text-info">A showcase of my most recent and relevent game career work.</div>
         </div>
 
         <div class = "page-block">
@@ -304,7 +304,7 @@
         </div>
         
         <!-- More Projects -->
-        <div class = "page-block-header-container" id = "moreProjectsHeader">
+        <!-- <div class = "page-block-header-container" id = "moreProjectsHeader">
             <div class = "page-block-header-text-header">More Projects</div>
             <div class = "page-block-header-text-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
         </div>
@@ -313,7 +313,7 @@
             <div class = "game-career-container black-frame" id = "moreProjectsContainer">
                 
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- JS Main -->
@@ -359,14 +359,66 @@
                     hoverHeight: '4px',
                     onClick: () => {window.scrollTo({top: gameCareerHeader.offsetTop - 30, behavior: 'smooth'});},
                 },
-                {
-                    text: "More Projects",
-                    hoverHeight: '4px',
-                    onClick: () => {window.scrollTo({top: moreProjectsHeader.offsetTop - 30, behavior: 'smooth'});},
-                },
+                // {
+                //     text: "More Projects",
+                //     hoverHeight: '4px',
+                //     onClick: () => {window.scrollTo({top: moreProjectsHeader.offsetTop - 30, behavior: 'smooth'});},
+                // },
             ]
         });
         document.body.appendChild(pageHeader);
+
+        function copyDiscord(thisButton) {
+
+            const textToCopy = "pinecrumb";
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+
+            textArea.select();
+
+            try {
+                document.execCommand("copy");
+                console.log("Text copied to clipboard!");
+            } catch (err) {
+                console.error("Unable to copy text to clipboard:", err);
+            }
+
+            const element = thisButton.element;
+            const textCopiedFrame = document.createElement('div');
+            textCopiedFrame.classList.add('grey-frame');
+            textCopiedFrame.style.position = 'absolute';
+            textCopiedFrame.style.width = '100px';
+            textCopiedFrame.style.height = '30px';
+            textCopiedFrame.style.top = '30px';
+            textCopiedFrame.style.left = '50%';
+            textCopiedFrame.style.transform = 'translate(-50%, 100%)';
+            textCopiedFrame.style.display = 'flex';
+            textCopiedFrame.style.justifyContent = 'center';
+            textCopiedFrame.style.alignItems = 'center';
+            textCopiedFrame.style.fontSize = '16px';
+            textCopiedFrame.style.backgroundColor = 'rgba(0, 170, 100, 1)';
+            textCopiedFrame.style.borderRadius = '4px';
+            textCopiedFrame.style.zIndex = '1000'; 
+            textCopiedFrame.innerHTML = "Copied!";
+
+            textCopiedFrame.style.opacity = '0';
+            textCopiedFrame.style.transition = 'opacity 0.1s ease-in-out';
+
+            thisButton.element.appendChild(textCopiedFrame);
+
+            setTimeout(() => {
+                textCopiedFrame.style.opacity = '1';
+                setTimeout(() => {
+                    textCopiedFrame.style.opacity = '0';
+                    setTimeout(() => {
+                        thisButton.element.removeChild(textCopiedFrame);
+                    }, 100);
+                }, 1000);
+            }, 0);
+
+            document.body.removeChild(textArea);
+        }
 
         // Contact Buttons
         const contactContainer = document.getElementById('contactContainer');
@@ -398,15 +450,15 @@
                 url: "https://www.linkedin.com/in/thomas-g-405b32131/",
                 newTab: true,
             },
-            // {
-            //     title: "Discord",
-            //     imageSrc: "assets/about-me/contact-icons/contact-icon-discord.png",
-            //     backgroundColor: 'rgb(88, 100, 242)',
-            //     height: '50px',
-            //     hoverHeight: '6px',
-            //     url: "google.com",
-            //     newTab: true,
-            // }, 
+            {
+                title: "Discord",
+                imageSrc: "assets/about-me/contact-icons/contact-icon-discord.png",
+                backgroundColor: 'rgb(88, 100, 242)',
+                height: '50px',
+                hoverHeight: '6px',
+                onClick: copyDiscord,
+                newTab: true,
+            }, 
             {
                 title: "GitHub",
                 imageSrc: "assets/about-me/contact-icons/contact-icon-github.png",
@@ -553,7 +605,7 @@
             moreProjectsContainer.appendChild(mediaButton);
         }
 
-        //makeGameCareerButton(projectsData.Tygoonery);
+        makeGameCareerButton(projectsData.Tygoonery);
         makeGameCareerButton(projectsData.Steelfront);
         makeGameCareerButton(projectsData.LandOfMerchants);
         makeGameCareerButton(projectsData.RobberySimulator);
@@ -562,10 +614,10 @@
         makeGameCareerButton(projectsData.KingOfTheKrill);
         //makeGameCareerButton(projectsData.SkyOfRobloxia);
 
-        makeMoreProjectsButton(projectsData.TycoonPlugin);
-        makeMoreProjectsButton(projectsData.TycoonPlugin);
-        makeMoreProjectsButton(projectsData.TycoonPlugin);
-        makeMoreProjectsButton(projectsData.TycoonPlugin);
+        // makeMoreProjectsButton(projectsData.TycoonPlugin);
+        // makeMoreProjectsButton(projectsData.TycoonPlugin);
+        // makeMoreProjectsButton(projectsData.TycoonPlugin);
+        // makeMoreProjectsButton(projectsData.TycoonPlugin);
 
 
 

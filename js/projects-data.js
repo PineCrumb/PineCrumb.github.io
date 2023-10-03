@@ -2,17 +2,17 @@ const projectsData = {
 
     // game career
     Tygoonery : {
-        title: "Pet Factory Simulator",
-        subTitle: "Creator and Developer",
+        title: "Tygoonery (Game Studio)",
+        subTitle: "Founder and Developer",
         date: "March 2023 - Present",
         content: "sdlf  sdd s s dfsdf fsds fdsdf sdf sdf sdf sdf sdf sdfsd fsdf  sfds dfsdf sdf sdf sdf  sdf sd fjsld j",
-        thumbnailSrc: "assets/game-career/robbery-simulator/thumbnail.png",
-        headerLogoSrc: "assets/game-career/robbery-simulator/logo.png",
+        thumbnailSrc: "assets/game-career/tygoonery/thumbnail.png",
+        headerLogoSrc: "assets/game-career/tygoonery/logo.png",
         headerLogoStyle: {
-
+            height: "calc(90%)",
         },
         headerText: ["Programming", "Designing", "Leadership"],
-        url: "robbery-simulator.html",
+        url: "tygoonery.html",
     },
 
         
@@ -55,7 +55,7 @@ const projectsData = {
         headerLogoStyle: {
             width: "100%",
         },
-        headerText: ["Programming", "Designing", "Leadership"],
+        headerText: ["Programming", "Modeling"],
         url: "half-life.html",
     },
 
@@ -84,7 +84,7 @@ const projectsData = {
             height: "160%",
             top: "20%",
         },
-        headerText: ["Programming", "Designing", "Leadership"],
+        headerText: ["Programming", "Implementing"],
         url: "titan-god-simulator.html",
     },
 
@@ -98,7 +98,7 @@ const projectsData = {
         headerLogoStyle: {
             height: "50%",
         },
-        headerText: ["Programming", "Designing", "Leadership"],
+        headerText: ["Programming", "Designing", "UI"],
         url: "king-of-the-krill.html",
     },
 

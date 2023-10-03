@@ -57,7 +57,10 @@ class BasicButton {
             basicButton = document.createElement('div');
             basicButton.classList.add('basic-button');
             basicButton.style.height = this.height;
-            basicButton.addEventListener('click', basicData.onClick);
+            basicButton.addEventListener('click', () => {
+                // call on click with the BasicButton object as the argument
+                basicData.onClick(this);
+            });
         }
 
         const basicButtonFrame = document.createElement('div');

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta -->
+        <title>PineCrumb - Tygoonery</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/general.css" />
+        <link rel="stylesheet" href="css/page-header.css" />
+        <link rel="stylesheet" href="css/basic-button.css" />
+        <link rel="stylesheet" href="css/project.css" />
+    </head>
+
+    <body>
+        <div class = "page-backdrop"></div>
+        <div class = "page-content"> </div>
+        <script src="js/project.js"></script>
+        <script src="js/is-using-mouse.js"></script>
+        <script src="js/basic-button.js"></script>
+        <script src="js/page-header.js"></script>
+        <script src="js/projects-data.js"></script>
+
+        <script type="module">
+    
+            import {ProjectContent} from './js/ContentElements/ProjectContent.js';
+
+            const pageContent = document.querySelector('.page-content');
+            const pageHeader = newPageHeader({
+                buttonDatas: [
+                    {
+                        text: "Back Home",
+                        onClick: goBackHome,
+                        hoverHeight: '4px',
+                    },
+                ]
+            });
+            document.body.appendChild(pageHeader);
+
+            const projectHeader = makeProjectHeader(projectsData.Tygoonery);
+            pageContent.appendChild(projectHeader);
+
+            new ProjectContent({
+                title: 'Tycoon Plugin Showcase',
+                desc:
+`
+"King of the Krill" was a project I developed for fun during my college years at SCAD, using it as a vessel for occasional design assignments.
+<span class = "new-line"></span>
+The idea of the game was to reimagine the simulator genre as a PVP roguelike experience, where players collected pellets to advance in the core game and coins to advance their progress in the meta game.
+<span class = "new-line"></span>
+Players also chose from different fish classes, each offering unique abilities with their own depth and strategy to the gameplay.
+`,
+                parent: pageContent,
+                contentDatas: [
+                    {
+                        className: 'YoutubeVideo',
+                        src: 'https://www.youtube.com/embed/kJNNv0mBjkc',
+                    },
+                ],
+            });
+        </script>
+
+        <script src="https://www.youtube.com/player_api"></script>
+    </body>
+</html>
