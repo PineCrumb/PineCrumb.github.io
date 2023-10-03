@@ -60,7 +60,7 @@ class BasicButton {
             basicButton.addEventListener('click', () => {
                 // call on click with the BasicButton object as the argument
                 basicData.onClick(this);
-            });
+            }, true);
         }
 
         const basicButtonFrame = document.createElement('div');

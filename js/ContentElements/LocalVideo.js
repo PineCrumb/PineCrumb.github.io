@@ -60,7 +60,7 @@ export class LocalVideo extends ContentElementBase {
             thumbnailImg.style.display = 'none';
             playButton.style.display = 'none';
             videoFrame.play();
-        });
+        }, true);
 
         container.appendChild(videoFrame);
 

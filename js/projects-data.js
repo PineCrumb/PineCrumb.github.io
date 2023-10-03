@@ -5,7 +5,7 @@ const projectsData = {
         title: "Tygoonery (Game Studio)",
         subTitle: "Founder and Developer",
         date: "March 2023 - Present",
-        content: "sdlf  sdd s s dfsdf fsds fdsdf sdf sdf sdf sdf sdf sdfsd fsdf  sfds dfsdf sdf sdf sdf  sdf sd fjsld j",
+        content: "My studio I work on in my freetime, targeted towards making high quality tycoon games on Roblox quickly with custom innovative toolsets.",
         thumbnailSrc: "assets/game-career/tygoonery/thumbnail.png",
         headerLogoSrc: "assets/game-career/tygoonery/logo.png",
         headerLogoStyle: {
