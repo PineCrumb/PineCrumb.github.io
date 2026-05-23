@@ -241,15 +241,16 @@
                     <div class = "me-content-text-container">
                         <header class = "me-content-text-header">👋 Hi, I'm PineCrumb.</header>
                         <div class = "me-content-text-desc">
-                            <p>I'm a 23 year old developer and former SCAD student in New Hampshire who has been <span class = "text-bold">making Roblox games for 10+ years</span>.</p>
-                            <p>As a Roblox Developer, I’ve had the privilege of working with fantastic colleagues and companies over the years, and am extremely fortunate and proud to call myself apart of the Roblox community. <span class = "text-bold">Learn about my career and passion here</span>.</p>
+                            <p>I'm a 26 year old game developer. I've been <span class = "text-bold">making Roblox games for 13+ years</span>.</p>
+                            <p>As a Roblox Developer, I’ve had the privilege of working with fantastic colleagues + companies over the years, and am proud to call myself apart of the Roblox community.</p>
+                            <p></p><span class = "text-bold">Learn about my career and passion here</span>.</p>
                         </div>
                     </div>
                 </div>
                 <div class = "me-info-container">
                     <div class = "me-info-work-status-container black-frame">
-                        <div class = "me-info-work-status-text">Status: <span class = "work-status-on">Open for Work!</span></div>
-                        <div class = "me-info-work-status-date-text">Last Updated: October 2023</div>
+                        <div class = "me-info-work-status-text">Status: <span class = "work-status-off">Not Available</span></div>
+                        <div class = "me-info-work-status-date-text">Last Updated: May 2026</div>
                     </div>
                     <div class = "me-info-contacts-container black-frame" id = "contactContainer">
 
@@ -334,7 +335,7 @@
                     hoverHeight: '4px',
                     backgroundColor: 'rgba(0, 170, 100, 1)',
                     onClick: () => {
-                        window.open('assets/resume-full-doc.docx', '_blank');
+                        window.open('assets/resume.pdf', '_blank');
                     },
                 
                 },
@@ -438,7 +439,7 @@
                 backgroundColor: 'rgb(29, 161, 242)',
                 height: '50px',
                 hoverHeight: '6px',
-                url: "https://twitter.com/PineCrumbRBXL",
+                url: "https://twitter.com/PineCrumb",
                 newTab: true,
             }, 
             {
@@ -605,6 +606,8 @@
             moreProjectsContainer.appendChild(mediaButton);
         }
 
+        makeGameCareerButton(projectsData.Volleyball);
+        makeGameCareerButton(projectsData.Skibidi);
         makeGameCareerButton(projectsData.Tygoonery);
         makeGameCareerButton(projectsData.Steelfront);
         makeGameCareerButton(projectsData.LandOfMerchants);

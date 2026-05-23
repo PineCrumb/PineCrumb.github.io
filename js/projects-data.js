@@ -1,6 +1,34 @@
 const projectsData = {
 
     // game career
+    Volleyball : {
+        title: "Volleyball Legends",
+        subTitle: "Lead Developer",
+        date: "September 2025 - Present",
+        content: "Become king of the court in this anime inspired volleyball game - one of the top competitive sport games on Roblox.",
+        thumbnailSrc: "assets/game-career/volleyball-legends/thumbnail.png",
+        headerLogoSrc: "assets/game-career/volleyball-legends/logo.png",
+        headerLogoStyle: {
+            height: "calc(90%)",
+        },
+        headerText: ["Programming", "Designing"],
+        url: "volleyball-legends.html",
+    },
+    
+    Skibidi : {
+        title: "Skibidi TD (by Fixated Games)",
+        subTitle: "Lead Developer and Manager",
+        date: "January 2024 - August 2025",
+        content: "Use characters from the viral Skibidi Toilet series to defend against waves of enemies in this tower defense game.",
+        thumbnailSrc: "assets/game-career/skibidi-td/thumbnail.png",
+        headerLogoSrc: "assets/game-career/skibidi-td/logo.png",
+        headerLogoStyle: {
+            height: "calc(90%)",
+        },
+        headerText: ["Programming", "Designing", "Leadership", "Management"],
+        url: "skibidi-td.html",
+    },
+
     Tygoonery : {
         title: "Tygoonery (Game Studio)",
         subTitle: "Founder and Developer",

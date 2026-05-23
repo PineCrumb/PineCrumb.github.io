@@ -3,12 +3,14 @@ import { YoutubeVideo } from './YoutubeVideo.js';
 import {LocalVideo} from './LocalVideo.js';
 import {ImageViewer} from './ImageViewer.js';
 import {LinkViewer} from './LinkViewer.js';
+import {EmptyStateBox} from './EmptyStateBox.js';
 
 let exposedContentElementClasses = {
     'YoutubeVideo': YoutubeVideo,
     'LocalVideo': LocalVideo,
     'ImageViewer': ImageViewer,
     'LinkViewer': LinkViewer,
+    'EmptyStateBox': EmptyStateBox,
 };
 
 export class ProjectContent extends ContentElementBase {

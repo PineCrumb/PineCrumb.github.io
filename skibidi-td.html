@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta -->
+        <title>PineCrumb - Skibidi TD</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/general.css" />
+        <link rel="stylesheet" href="css/page-header.css" />
+        <link rel="stylesheet" href="css/basic-button.css" />
+        <link rel="stylesheet" href="css/project.css" />
+    </head>
+
+    <body>
+        <div class = "page-backdrop"></div>
+        <div class = "page-content"> </div>
+        <script src="js/project.js"></script>
+        <script src="js/is-using-mouse.js"></script>
+        <script src="js/basic-button.js"></script>
+        <script src="js/page-header.js"></script>
+        <script src="js/projects-data.js"></script>
+
+        <script type="module">
+    
+            import {EmptyStateBox} from './js/ContentElements/EmptyStateBox.js';
+
+            const pageContent = document.querySelector('.page-content');
+            const pageHeader = newPageHeader({
+                buttonDatas: [
+                    {
+                        text: "Back Home",
+                        onClick: goBackHome,
+                        hoverHeight: '4px',
+                    },
+                    {
+                        text: "Play Game",
+                        onClick: () => {
+                            window.open('https://www.roblox.com/games/15444929588/Skibidi-Tower-Defense', '_blank');
+                        },
+                        backgroundColor: 'rgba(0, 170, 100, 1)',
+                        hoverHeight: '4px',
+                    },
+                ]
+            });
+            document.body.appendChild(pageHeader);
+
+            const projectHeader = makeProjectHeader(projectsData.Skibidi);
+            pageContent.appendChild(projectHeader);
+
+            new EmptyStateBox({
+                parent: pageContent,
+                logoSrc: 'assets/about-me/me-icon.svg',
+                logoAlt: 'PineCrumb logo',
+                title: 'I haven\'t written about this project yet.',
+                desc: 'Play the game to learn more about it, and contact me directly to learn more about my work contributions!',
+            });
+        </script>
+
+        <script src="https://www.youtube.com/player_api"></script>
+    </body>
+</html>
